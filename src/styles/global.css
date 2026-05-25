@@ -2,7 +2,7 @@
 @plugin "daisyui";
 
 @theme {
-  --font-display: "DM Serif Display", serif;
+  --font-display: "Space Grotesk", sans-serif;
   --font-body: "Plus Jakarta Sans", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
@@ -12,6 +12,8 @@
   --color-cream: #E8DCC4;
   --color-paper: #FDFBF7;
   --color-surface: #F5F0E6;
+  --color-dark: #0A0A0B;
+  --color-dark-secondary: #111113;
   --color-success: #4A7C59;
 }
 
@@ -37,7 +39,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-surface);
+  background: #111113;
 }
 
 ::-webkit-scrollbar-thumb {

@@ -1,0 +1,77 @@
+---
+const investors = [
+  "Mr. Amit Madaan",
+  "Saurav Munjal",
+  "Mitesh Nandlaskar",
+  "Ramanathan K",
+  "Tushar Kapoor",
+  "Rajesh Singla",
+  "Amit Singal",
+  "Suresh Jain",
+  "Sundeep Gaba",
+  "Vishal Gandhi",
+  "Vishal Kedia",
+  "Gaurav Sharma",
+  "CA Apurv Bansal",
+  "Nikhil Doda",
+  "Vishal Sood",
+  "Manoj Kumar",
+  "Vivek Utreja",
+  "Rajesh Azad",
+  "Lehar Gandhi",
+  "Nikhil Gupta",
+  "Lalit Kumar Bansal",
+  "Mr. Mandeep Singh",
+  "Mandeep Sodhi",
+  "Mr. Puneet Verma",
+  "Ravjot Ahuluwalia",
+  "Sunil Khullar",
+  "Angad Bindra",
+  "Sanjay Aggarwal",
+  "Kiran kurwade",
+  "Mr. Advait Upadhaya",
+  "Ms. Shilpi Jain",
+  "Sumant Handa",
+  "Anil Channa",
+  "Gaurav Vashisht",
+  "Nikhil garg",
+  "CA Manoj Lamba"
+];
+---
+
+<section class="py-20 lg:py-32 bg-[#1A1A2E]">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-12 reveal">
+      <div>
+        <p class="text-[#D4A853] font-mono text-sm tracking-widest mb-4">OUR NETWORK</p>
+        <h2 class="font-['DM_Serif_Display'] text-4xl lg:text-5xl text-white">
+          Our Network of <span class="text-gold-gradient">Visionary Investors</span>
+        </h2>
+      </div>
+      <a
+        href="/our-team"
+        class="inline-flex items-center gap-2 px-6 py-3 border-2 border-[#D4A853] text-[#D4A853] font-semibold rounded-full hover:bg-[#D4A853] hover:text-[#1A1A2E] transition-all duration-300"
+      >
+        See All Investors
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="carousel-container flex gap-6 overflow-x-auto pb-4 -mx-4 px-4">
+      {investors.map((investor, index) => (
+        <div
+          class="carousel-item flex-shrink-0 w-48 text-center"
+        >
+          <div class="w-full aspect-square bg-gradient-to-br from-[#D4A853]/30 to-[#D4A853]/10 rounded-2xl flex items-center justify-center mb-3 hover:scale-105 transition-transform duration-300">
+            <span class="font-['DM_Serif_Display'] text-2xl text-[#D4A853]">
+              {investor.split(' ').map(n => n[0]).slice(0, 2).join('')}
+            </span>
+          </div>
+          <p class="text-white/90 text-sm font-medium truncate">{investor}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

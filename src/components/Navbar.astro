@@ -1,0 +1,87 @@
+---
+const navLinks = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Fund Raising", href: "/fund-raising" },
+  { name: "Startup", href: "/startup" },
+  { name: "Investor", href: "/investors" },
+  { name: "Institutional Support", href: "/institutional-support" },
+  { name: "Events", href: "/events" },
+  { name: "Contact", href: "/contact" },
+];
+---
+
+<nav class="navbar-main sticky top-0 z-50 bg-white transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3">
+        <div class="w-12 h-12 bg-gradient-to-br from-[#D4A853] to-[#B8923E] rounded-xl flex items-center justify-center shadow-lg">
+          <span class="text-white font-bold text-xl font-['DM_Serif_Display']">PA</span>
+        </div>
+        <div class="hidden sm:block">
+          <span class="font-['DM_Serif_Display'] text-xl text-[#1A1A2E]">Punjab Angels</span>
+          <span class="block text-xs text-[#6B6B6B] font-medium tracking-wider uppercase">Network</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden lg:flex items-center gap-1">
+        {navLinks.map(link => (
+          <a
+            href={link.href}
+            class="px-4 py-2 text-sm font-medium text-[#2D2D2D] hover:text-[#D4A853] transition-colors rounded-lg hover:bg-[#F5F0E6]"
+          >
+            {link.name}
+          </a>
+        ))}
+      </div>
+
+      <!-- CTA + Mobile Toggle -->
+      <div class="flex items-center gap-4">
+        <a
+          href="/apply"
+          class="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-[#D4A853] to-[#B8923E] text-white font-semibold rounded-full hover:shadow-lg hover:shadow-[#D4A853]/30 transition-all duration-300 hover:-translate-y-0.5"
+        >
+          Apply Now
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+          </svg>
+        </a>
+
+        <!-- Mobile menu button -->
+        <button class="lg:hidden btn btn-square btn-ghost" id="mobile-menu-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="lg:hidden hidden bg-white border-t" id="mobile-menu">
+    <div class="px-4 py-4 space-y-1">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class="block px-4 py-3 text-[#2D2D2D] hover:text-[#D4A853] hover:bg-[#F5F0E6] rounded-lg transition-colors"
+        >
+          {link.name}
+        </a>
+      ))}
+      <a
+        href="/apply"
+        class="block mt-4 px-6 py-3 bg-gradient-to-r from-[#D4A853] to-[#B8923E] text-white font-semibold rounded-full text-center"
+      >
+        Apply Now
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+</script>

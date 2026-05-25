@@ -1,0 +1,79 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Punjab Angels Network - India's foremost platform dedicated to cultivating an startup ecosystem" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>{title}</title>
+  </head>
+  <body class="bg-[#FDFBF7] text-[#2D2D2D]">
+    <slot />
+    <script>
+      // Intersection Observer for scroll animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+      // Sticky navbar
+      const navbar = document.querySelector('.navbar-main');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+          navbar?.classList.add('navbar-scrolled');
+        } else {
+          navbar?.classList.remove('navbar-scrolled');
+        }
+      });
+
+      // Counter animation
+      const counters = document.querySelectorAll('.counter');
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const target = parseInt(entry.target.getAttribute('data-target') || '0');
+            let count = 0;
+            const duration = 2000;
+            const step = target / (duration / 16);
+            const updateCounter = () => {
+              count += step;
+              if (count < target) {
+                entry.target.textContent = Math.floor(count).toString();
+                requestAnimationFrame(updateCounter);
+              } else {
+                entry.target.textContent = target.toString();
+              }
+            };
+            updateCounter();
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      counters.forEach(counter => counterObserver.observe(counter));
+    </script>
+    <style>
+      .navbar-scrolled {
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(12px);
+      }
+    </style>
+  </body>
+</html>

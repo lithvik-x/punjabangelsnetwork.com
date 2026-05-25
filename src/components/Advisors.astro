@@ -1,0 +1,50 @@
+---
+const advisors = [
+  { name: "Mr. Ramanan Ramanathan" },
+  { name: "Mr. Raman Bhalla" },
+  { name: "Mr. Iqbal Singh" },
+  { name: "Mr. Vivek Attray" },
+  { name: "Mr. Atul Mehta" },
+  { name: "Dr. Srinivasan Iyengar" },
+  { name: "Mr. Dilbir Singh" },
+  { name: "Mr. Atul Gupta" },
+  { name: "Mr. Avinash Nichkawde" },
+  { name: "Ms. Anuradha Chawla" },
+  { name: "Mr. Sumit Singh" },
+  { name: "Mr. Deepak Kumar" },
+];
+---
+
+<section class="py-20 lg:py-32 bg-[#F5F0E6]">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-16 reveal">
+      <p class="text-[#D4A853] font-mono text-sm tracking-widest mb-4">ADVISORY BOARD</p>
+      <h2 class="font-['DM_Serif_Display'] text-4xl lg:text-5xl text-[#1A1A2E]">
+        Board of <span class="text-gold-gradient">Advisors</span>
+      </h2>
+      <p class="text-[#6B6B6B] mt-4 max-w-2xl mx-auto">
+        The masterminds of the Business World. Our Eminent Board of advisor constitutes brilliant minds from distinct domains with years of experience.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 lg:gap-6">
+      {advisors.map((advisor, index) => (
+        <div
+          class="group text-center reveal"
+          style={`animation-delay: ${index * 50}ms;`}
+        >
+          <div class="aspect-square bg-gradient-to-br from-[#1A1A2E] to-[#2D2D4A] rounded-2xl flex items-center justify-center mb-3 group-hover:scale-105 group-hover:shadow-lg transition-all duration-300 overflow-hidden">
+            <div class="w-full h-full bg-gradient-to-br from-[#D4A853]/20 to-transparent flex items-center justify-center">
+              <span class="font-['DM_Serif_Display'] text-3xl text-[#D4A853] opacity-80">
+                {advisor.name.split(' ').map(n => n[0]).slice(0, 2).join('')}
+              </span>
+            </div>
+          </div>
+          <p class="text-sm font-medium text-[#2D2D2D] group-hover:text-[#D4A853] transition-colors">
+            {advisor.name.replace('Mr. ', '').replace('Ms. ', '')}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,39 @@
+---
+const partners = [
+  { name: "Hem Angels", url: "" },
+  { name: "Sydney Investors", url: "" },
+  { name: "Indian Healthcare Angels", url: "" },
+  { name: "Static flow", url: "" }
+];
+---
+
+<section class="py-20 lg:py-32 bg-[#F5F0E6]">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-16 reveal">
+      <p class="text-[#D4A853] font-mono text-sm tracking-widest mb-4">COLLABORATIONS</p>
+      <h2 class="font-['DM_Serif_Display'] text-4xl lg:text-5xl text-[#1A1A2E]">
+        Meet Our <span class="text-gold-gradient">Dynamic Partners</span>
+      </h2>
+      <p class="text-[#6B6B6B] mt-4">Connect, Collaborate, Conquer</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {partners.map((partner, index) => (
+        <a
+          href={partner.url || "#"}
+          class="group flex flex-col items-center justify-center p-8 bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 reveal"
+          style={`animation-delay: ${index * 100}ms;`}
+        >
+          <div class="w-24 h-24 bg-gradient-to-br from-[#1A1A2E] to-[#2D2D4A] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300">
+            <span class="font-['DM_Serif_Display'] text-lg text-[#D4A853] text-center px-2">
+              {partner.name.split(' ').map(n => n[0]).join('')}
+            </span>
+          </div>
+          <span class="font-semibold text-[#2D2D2D] group-hover:text-[#D4A853] transition-colors">
+            {partner.name}
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

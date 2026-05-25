@@ -1,0 +1,44 @@
+---
+const startups = [
+  { name: "Let's Game Now", url: "https://letsgamenow.com/home" },
+  { name: "Basil", url: "https://www.basil.health/" },
+  { name: "Taupe", url: "https://mytaupe.com/" },
+  { name: "SmileKey", url: "https://smilekey.in/" },
+  { name: "eSoulify", url: "https://esoullyf.in/" },
+  { name: "Whizz EV", url: "#" }
+];
+---
+
+<section class="py-20 lg:py-32 bg-[#FDFBF7]">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-16 reveal">
+      <p class="text-[#D4A853] font-mono text-sm tracking-widest mb-4">PORTFOLIO</p>
+      <h2 class="font-['DM_Serif_Display'] text-4xl lg:text-5xl text-[#1A1A2E]">
+        <span class="text-gold-gradient">STARTUPS</span> PORTFOLIO
+      </h2>
+      <p class="text-[#6B6B6B] mt-4">Let's support us to help them</p>
+    </div>
+
+    <div class="carousel-container flex gap-6 overflow-x-auto pb-4 -mx-4 px-4">
+      {startups.map((startup, index) => (
+        <a
+          href={startup.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="carousel-item flex-shrink-0 w-64 group"
+        >
+          <div class="w-full aspect-video bg-gradient-to-br from-[#1A1A2E] to-[#2D2D4A] rounded-2xl flex items-center justify-center mb-3 group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+            <div class="w-full h-full bg-gradient-to-br from-[#D4A853]/20 to-transparent flex items-center justify-center">
+              <span class="font-['DM_Serif_Display'] text-xl text-[#D4A853] text-center px-4">
+                {startup.name}
+              </span>
+            </div>
+          </div>
+          <p class="text-[#2D2D2D] font-medium text-center group-hover:text-[#D4A853] transition-colors">
+            {startup.name}
+          </p>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

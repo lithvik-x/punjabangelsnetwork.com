@@ -1,0 +1,152 @@
+---
+const investorBenefits = [
+  "Gain exclusive entry to a network of promising startups and investment opportunities",
+  "Enjoy exclusive access to comprehensive due diligence reports and market insights",
+  "Access curated investment deals exclusively available to you",
+  "Receive priority consideration for investment deals",
+  "Attend invitations-only pitch events and exclusive networking sessions for investors",
+  "Benefit from end-to-end support for startup investments",
+  "Participate in investor masterclasses and workshops for continuous learning",
+  "Explore opportunities to join investment syndicates and co-investment deals",
+  "Seize the opportunity to start investing from as low as 1 Lakh onward"
+];
+
+const corporateBenefits = [
+  "Exclusive invites to curated networking events and pitch sessions",
+  "Entry to a wealth of educational resources, online workshops, and webinars",
+  "Connect with a network of promising startups and investors",
+  "Attend masterclasses and in-person workshops for hands-on learning",
+  "Avail discounted co-working space and infrastructure support through our workspace partners",
+  "Tap into cost-effective professional services provided by our partner organization"
+];
+---
+
+<section class="py-20 lg:py-32 bg-[#F5F0E6]">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-16 reveal">
+      <p class="text-[#D4A853] font-mono text-sm tracking-widest mb-4">MEMBERSHIP</p>
+      <h2 class="font-['DM_Serif_Display'] text-4xl lg:text-5xl text-[#1A1A2E]">
+        Discover the power of membership with <span class="text-gold-gradient">India's largest revenue-based financing platform</span>
+      </h2>
+    </div>
+
+    <!-- Tabs -->
+    <div class="bg-white rounded-3xl shadow-xl overflow-hidden reveal">
+      <!-- Tab Headers -->
+      <div class="flex border-b border-[#E8DCC4]">
+        <button
+          class="membership-tab flex-1 px-8 py-6 text-lg font-semibold text-[#D4A853] border-b-2 border-[#D4A853] transition-all"
+          data-tab="investors"
+        >
+          Investors
+        </button>
+        <button
+          class="membership-tab flex-1 px-8 py-6 text-lg font-semibold text-[#6B6B6B] hover:text-[#D4A853] transition-all"
+          data-tab="corporates"
+        >
+          Corporates
+        </button>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="p-8 lg:p-12">
+        <!-- Investors Tab -->
+        <div id="investors-content" class="membership-content">
+          <div class="grid lg:grid-cols-3 gap-8 items-start">
+            <div class="lg:col-span-2">
+              <h3 class="font-['DM_Serif_Display'] text-3xl text-[#1A1A2E] mb-6">For Investors</h3>
+              <ul class="space-y-4">
+                {investorBenefits.map((benefit, index) => (
+                  <li class="flex items-start gap-4" style={`animation-delay: ${index * 50}ms;`}>
+                    <div class="w-6 h-6 bg-[#D4A853]/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#D4A853]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                    </div>
+                    <span class="text-[#2D2D2D]">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div class="lg:col-span-1">
+              <div class="bg-gradient-to-br from-[#1A1A2E] to-[#2D2D4A] rounded-2xl p-8 text-center">
+                <h4 class="font-['DM_Serif_Display'] text-2xl text-white mb-4">Start Investing Today</h4>
+                <p class="text-white/70 mb-6">Begin your journey as a Punjab Angels investor</p>
+                <a
+                  href="/investor-enrollment"
+                  class="inline-flex items-center justify-center gap-2 w-full px-6 py-4 bg-[#D4A853] text-[#1A1A2E] font-semibold rounded-full hover:bg-[#B8923E] transition-all duration-300"
+                >
+                  Begin Your Investment Journey
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Corporates Tab -->
+        <div id="corporates-content" class="membership-content hidden">
+          <div class="grid lg:grid-cols-3 gap-8 items-start">
+            <div class="lg:col-span-2">
+              <h3 class="font-['DM_Serif_Display'] text-3xl text-[#1A1A2E] mb-6">For Corporates</h3>
+              <ul class="space-y-4">
+                {corporateBenefits.map((benefit, index) => (
+                  <li class="flex items-start gap-4" style={`animation-delay: ${index * 50}ms;`}>
+                    <div class="w-6 h-6 bg-[#D4A853]/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#D4A853]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                    </div>
+                    <span class="text-[#2D2D2D]">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div class="lg:col-span-1">
+              <div class="bg-gradient-to-br from-[#1A1A2E] to-[#2D2D4A] rounded-2xl p-8 text-center">
+                <h4 class="font-['DM_Serif_Display'] text-2xl text-white mb-4">Join Our Corporate Network</h4>
+                <p class="text-white/70 mb-6">Get started with corporate membership</p>
+                <a
+                  href="/corporate-membership-enrollment"
+                  class="inline-flex items-center justify-center gap-2 w-full px-6 py-4 bg-[#D4A853] text-[#1A1A2E] font-semibold rounded-full hover:bg-[#B8923E] transition-all duration-300"
+                >
+                  Get Started With Corporate Membership
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const tabs = document.querySelectorAll('.membership-tab');
+  const contents = document.querySelectorAll('.membership-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-tab');
+
+      tabs.forEach(t => {
+        t.classList.remove('text-[#D4A853]', 'border-b-2', 'border-[#D4A853]');
+        t.classList.add('text-[#6B6B6B]');
+      });
+
+      tab.classList.add('text-[#D4A853]', 'border-b-2', 'border-[#D4A853]');
+      tab.classList.remove('text-[#6B6B6B]');
+
+      contents.forEach(content => {
+        content.classList.add('hidden');
+      });
+
+      document.getElementById(`${target}-content`)?.classList.remove('hidden');
+    });
+  });
+</script>

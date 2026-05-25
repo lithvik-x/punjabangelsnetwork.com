@@ -1,0 +1,35 @@
+---
+const stats = [
+  { value: "100+", label: "Total Events", icon: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" },
+  { value: "100+", label: "Investors", icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" },
+  { value: "12+", label: "Partners", icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" },
+  { value: "12+", label: "Board of Advisors", icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" }
+];
+---
+
+<section class="py-20 lg:py-32 bg-[#FDFBF7]">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-16 reveal">
+      <h2 class="font-['DM_Serif_Display'] text-4xl lg:text-5xl text-[#1A1A2E]">
+        Join your hands with us for a <span class="text-gold-gradient">better life and future</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+      {stats.map((stat, index) => (
+        <div
+          class="text-center p-8 bg-gradient-to-br from-[#1A1A2E] to-[#2D2D4A] rounded-3xl reveal"
+          style={`animation-delay: ${index * 100}ms;`}
+        >
+          <div class="w-16 h-16 bg-[#D4A853]/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#D4A853]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d={stat.icon}/>
+            </svg>
+          </div>
+          <span class="font-['DM_Serif_Display'] text-5xl text-[#D4A853] block mb-2">{stat.value}</span>
+          <span class="text-white/80">{stat.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

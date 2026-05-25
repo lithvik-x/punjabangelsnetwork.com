@@ -15,43 +15,55 @@ const advisors = [
 ];
 ---
 
-<section class="py-24 lg:py-32 bg-[#EBE4D6] relative overflow-hidden">
-  <!-- Subtle grid pattern -->
-  <div class="absolute inset-0 opacity-[0.02]" style="background-image: linear-gradient(#D4A853 1px, transparent 1px), linear-gradient(90deg, #D4A853 1px, transparent 1px); background-size: 60px 60px;"></div>
+<section class="py-28 lg:py-40 bg-[#EBE4D6] relative overflow-hidden">
+  <!-- Sophisticated grid pattern -->
+  <div class="absolute inset-0 opacity-[0.02]" style="background-image: linear-gradient(#D4A853 1px, transparent 1px), linear-gradient(90deg, #D4A853 1px, transparent 1px); background-size: 80px 80px;"></div>
 
-  <!-- Ambient warm glow -->
-  <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#D4A853]/8 rounded-full blur-[180px]"></div>
+  <!-- Ambient glows -->
+  <div class="absolute top-0 left-1/4 w-[700px] h-[700px] bg-[#D4A853]/6 rounded-full blur-[200px]"></div>
+  <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#B8923E]/5 rounded-full blur-[150px]"></div>
 
   <div class="relative max-w-[1600px] mx-auto px-6 lg:px-8">
-    <div class="text-center mb-16 reveal">
-      <div class="inline-flex items-center gap-3 mb-6">
-        <div class="w-12 h-[2px] bg-[#D4A853]"></div>
-        <span class="text-[#B8923E] text-sm font-medium tracking-[0.3em] uppercase font-['Space_Grotesk']">Advisory Board</span>
-        <div class="w-12 h-[2px] bg-[#D4A853]"></div>
+    <!-- Section header -->
+    <div class="text-center mb-20 reveal">
+      <div class="inline-flex items-center gap-4 mb-8">
+        <div class="w-14 h-[2px] bg-gradient-to-r from-transparent to-[#D4A853]"></div>
+        <span class="text-[#B8923E] text-sm font-semibold tracking-[0.35em] uppercase font-['Space_Grotesk']">Advisory Board</span>
+        <div class="w-14 h-[2px] bg-gradient-to-l from-transparent to-[#D4A853]"></div>
       </div>
-      <h2 class="font-['Space_Grotesk'] text-4xl lg:text-5xl xl:text-6xl font-bold text-[#1A1A2E] mb-4">
+      <h2 class="font-['Space_Grotesk'] text-4xl lg:text-5xl xl:text-6xl font-bold text-[#1A1A2E] mb-6">
         Board of
         <span class="bg-gradient-to-r from-[#D4A853] via-[#C9993D] to-[#B8923E] bg-clip-text text-transparent"> Advisors</span>
       </h2>
-      <p class="text-[#1A1A2E]/50 mt-4 max-w-2xl mx-auto">
+      <p class="text-[#1A1A2E]/50 mt-4 max-w-2xl mx-auto text-lg">
         The masterminds of the Business World. Our Eminent Board of advisor constitutes brilliant minds from distinct domains with years of experience.
       </p>
     </div>
 
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 lg:gap-6">
+    <!-- Advisors grid with premium cards -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5 lg:gap-7">
       {advisors.map((advisor, index) => (
         <div
           class="group text-center reveal"
           style={`animation-delay: ${index * 50}ms;`}
         >
-          <div class="aspect-square bg-white rounded-2xl flex items-center justify-center mb-3 group-hover:scale-105 group-hover:shadow-lg border border-[#D4A853]/10 transition-all duration-300 overflow-hidden">
-            <div class="w-full h-full bg-gradient-to-br from-[#D4A853]/10 to-transparent flex items-center justify-center">
-              <span class="font-['Space_Grotesk'] text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#D4A853] to-[#B8923E] bg-clip-text text-transparent">
+          <!-- Avatar card with glassmorphism -->
+          <div class="relative aspect-square bg-white/90 backdrop-blur-xl rounded-3xl flex items-center justify-center mb-4 border border-[#D4A853]/10 group-hover:border-[#D4A853]/40 transition-all duration-500 group-hover:shadow-[0_0_40px_rgba(212,168,83,0.15)] group-hover:-translate-y-2 overflow-hidden">
+            <!-- Inner gradient glow on hover -->
+            <div class="absolute inset-0 bg-gradient-to-br from-[#D4A853]/10 via-transparent to-[#B8923E]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            <!-- Decorative corner -->
+            <div class="absolute top-0 right-0 w-12 h-12 bg-gradient-to-bl from-[#D4A853]/10 to-transparent rounded-full -translate-y-6 translate-x-6 group-hover:from-[#D4A853]/20 transition-all duration-500"></div>
+
+            <div class="relative w-full h-full bg-gradient-to-br from-[#D4A853]/8 to-transparent flex items-center justify-center rounded-3xl">
+              <span class="font-['Space_Grotesk'] text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#D4A853] to-[#B8923E] bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-500">
                 {advisor.name.split(' ').map(n => n[0]).slice(0, 2).join('')}
               </span>
             </div>
           </div>
-          <p class="text-sm font-medium text-[#1A1A2E]/70 group-hover:text-[#B8923E] transition-colors duration-300">
+
+          <!-- Name -->
+          <p class="text-sm font-medium text-[#1A1A2E]/60 group-hover:text-[#B8923E] transition-colors duration-300 leading-tight px-1">
             {advisor.name.replace('Mr. ', '').replace('Ms. ', '')}
           </p>
         </div>

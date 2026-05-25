@@ -33,45 +33,60 @@ const services = [
 ];
 ---
 
-<section class="py-24 lg:py-32 bg-[#EBE4D6] relative overflow-hidden">
-  <!-- Subtle grid pattern -->
-  <div class="absolute inset-0 opacity-[0.02]" style="background-image: linear-gradient(#D4A853 1px, transparent 1px), linear-gradient(90deg, #D4A853 1px, transparent 1px); background-size: 60px 60px;"></div>
+<section class="py-28 lg:py-40 bg-[#EBE4D6] relative overflow-hidden">
+  <!-- Sophisticated grid pattern -->
+  <div class="absolute inset-0 opacity-[0.02]" style="background-image: linear-gradient(#D4A853 1px, transparent 1px), linear-gradient(90deg, #D4A853 1px, transparent 1px); background-size: 80px 80px;"></div>
 
-  <!-- Ambient warm glow -->
-  <div class="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-[#D4A853]/8 rounded-full blur-[180px]"></div>
+  <!-- Dynamic ambient glows -->
+  <div class="absolute bottom-0 left-1/4 w-[700px] h-[700px] bg-[#D4A853]/6 rounded-full blur-[200px]"></div>
+  <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#B8923E]/5 rounded-full blur-[150px]"></div>
 
   <div class="relative max-w-[1600px] mx-auto px-6 lg:px-8">
-    <div class="text-center mb-16 reveal">
-      <div class="inline-flex items-center gap-3 mb-6">
-        <div class="w-12 h-[2px] bg-[#D4A853]"></div>
-        <span class="text-[#B8923E] text-sm font-medium tracking-[0.3em] uppercase font-['Space_Grotesk']">Our Services</span>
-        <div class="w-12 h-[2px] bg-[#D4A853]"></div>
+    <!-- Section header -->
+    <div class="text-center mb-20 reveal">
+      <div class="inline-flex items-center gap-4 mb-8">
+        <div class="w-14 h-[2px] bg-gradient-to-r from-transparent to-[#D4A853]"></div>
+        <span class="text-[#B8923E] text-sm font-semibold tracking-[0.35em] uppercase font-['Space_Grotesk']">Our Services</span>
+        <div class="w-14 h-[2px] bg-gradient-to-l from-transparent to-[#D4A853]"></div>
       </div>
-      <h2 class="font-['Space_Grotesk'] text-4xl lg:text-5xl xl:text-6xl font-bold text-[#1A1A2E] mb-4">
+      <h2 class="font-['Space_Grotesk'] text-4xl lg:text-5xl xl:text-6xl font-bold text-[#1A1A2E] mb-6">
         Services We
         <span class="bg-gradient-to-r from-[#D4A853] via-[#C9993D] to-[#B8923E] bg-clip-text text-transparent"> Offer</span>
       </h2>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+    <!-- Services grid with premium cards -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {services.map((service, index) => (
         <div
-          class="group bg-white rounded-2xl p-8 border border-[#D4A853]/10 hover:border-[#D4A853]/30 transition-all duration-500 reveal hover:shadow-xl"
+          class="group relative bg-white/90 backdrop-blur-xl rounded-3xl p-10 border border-[#D4A853]/10 hover:border-[#D4A853]/30 transition-all duration-500 reveal hover:shadow-[0_0_60px_rgba(212,168,83,0.15)] hover:-translate-y-2"
           style={`animation-delay: ${index * 100}ms;`}
         >
-          <div class="w-14 h-14 bg-gradient-to-br from-[#D4A853]/10 to-[#D4A853]/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:from-[#D4A853]/20 transition-all duration-300">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#B8923E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Icon container with gradient background -->
+          <div class="w-16 h-16 bg-gradient-to-br from-[#D4A853]/10 via-[#D4A853]/5 to-transparent rounded-2xl flex items-center justify-center mb-8 group-hover:from-[#D4A853]/20 group-hover:via-[#D4A853]/10 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#B8923E] group-hover:text-[#D4A853] transition-colors duration-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d={service.icon}/>
             </svg>
           </div>
-          <h3 class="font-['Space_Grotesk'] text-xl lg:text-2xl font-semibold text-[#1A1A2E] mb-4">{service.title}</h3>
-          <p class="text-[#1A1A2E]/60 leading-relaxed mb-6">{service.description}</p>
-          <a href="#" class="inline-flex items-center gap-2 text-[#B8923E] font-medium hover:text-[#D4A853] transition-colors duration-300 group/link">
-            <span>Learn More</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+          <!-- Title with gradient underline on hover -->
+          <h3 class="font-['Space_Grotesk'] text-xl lg:text-2xl font-bold text-[#1A1A2E] mb-5 group-hover:text-[#B8923E] transition-colors duration-300">{service.title}</h3>
+
+          <!-- Description -->
+          <p class="text-[#1A1A2E]/55 leading-relaxed mb-8">{service.description}</p>
+
+          <!-- Learn more link with animated arrow -->
+          <a href="#" class="inline-flex items-center gap-2.5 text-[#B8923E] font-semibold group-hover:text-[#D4A853] transition-colors duration-300">
+            <span class="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 group-hover:after:w-full">Learn More</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
             </svg>
           </a>
+
+          <!-- Decorative corner accent -->
+          <div class="absolute top-0 right-0 w-16 h-16 overflow-hidden rounded-tr-3xl">
+            <div class="absolute top-0 right-0 w-8 h-8 bg-gradient-to-bl from-[#D4A853]/10 to-transparent rounded-full translate-x-4 -translate-y-4 group-hover:from-[#D4A853]/20 transition-all duration-500"></div>
+          </div>
         </div>
       ))}
     </div>

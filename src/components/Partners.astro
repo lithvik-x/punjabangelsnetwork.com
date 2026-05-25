@@ -7,40 +7,40 @@ const partners = [
 ];
 ---
 
-<section class="py-24 lg:py-32 bg-[#111113] relative overflow-hidden">
+<section class="py-24 lg:py-32 bg-[#EBE4D6] relative overflow-hidden">
   <!-- Subtle grid pattern -->
-  <div class="absolute inset-0 opacity-[0.015]" style="background-image: linear-gradient(#D4A853 1px, transparent 1px), linear-gradient(90deg, #D4A853 1px, transparent 1px); background-size: 60px 60px;"></div>
+  <div class="absolute inset-0 opacity-[0.02]" style="background-image: linear-gradient(#D4A853 1px, transparent 1px), linear-gradient(90deg, #D4A853 1px, transparent 1px); background-size: 60px 60px;"></div>
 
-  <!-- Ambient glow -->
-  <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#D4A853]/4 rounded-full blur-[180px]"></div>
+  <!-- Ambient warm glow -->
+  <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#D4A853]/8 rounded-full blur-[180px]"></div>
 
   <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
     <div class="text-center mb-16 reveal">
       <div class="inline-flex items-center gap-3 mb-6">
-        <div class="w-12 h-[1px] bg-[#D4A853]"></div>
-        <span class="text-[#D4A853] text-sm font-medium tracking-[0.3em] uppercase font-['Space_Grotesk']">Collaborations</span>
-        <div class="w-12 h-[1px] bg-[#D4A853]"></div>
+        <div class="w-12 h-[2px] bg-[#D4A853]"></div>
+        <span class="text-[#B8923E] text-sm font-medium tracking-[0.3em] uppercase font-['Space_Grotesk']">Collaborations</span>
+        <div class="w-12 h-[2px] bg-[#D4A853]"></div>
       </div>
-      <h2 class="font-['Space_Grotesk'] text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4">
+      <h2 class="font-['Space_Grotesk'] text-4xl lg:text-5xl xl:text-6xl font-bold text-[#1A1A2E] mb-4">
         Meet Our
-        <span class="bg-gradient-to-r from-[#D4A853] via-[#E8C47C] to-[#D4A853] bg-clip-text text-transparent"> Dynamic Partners</span>
+        <span class="bg-gradient-to-r from-[#D4A853] via-[#C9993D] to-[#B8923E] bg-clip-text text-transparent"> Dynamic Partners</span>
       </h2>
-      <p class="text-white/50 mt-4">Connect, Collaborate, Conquer</p>
+      <p class="text-[#1A1A2E]/50 mt-4">Connect, Collaborate, Conquer</p>
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
       {partners.map((partner, index) => (
         <a
           href={partner.url || "#"}
-          class="group flex flex-col items-center justify-center p-6 lg:p-8 bg-[#1A1A1C] rounded-3xl border border-white/5 hover:border-[#D4A853]/30 transition-all duration-300 reveal"
+          class="group flex flex-col items-center justify-center p-6 lg:p-8 bg-white rounded-3xl border border-[#D4A853]/10 hover:border-[#D4A853]/30 transition-all duration-300 reveal hover:shadow-xl"
           style={`animation-delay: ${index * 100}ms;`}
         >
-          <div class="w-20 h-20 lg:w-24 lg:h-24 bg-gradient-to-br from-[#252528] to-[#1A1A1C] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300 border border-white/5">
-            <span class="font-['Space_Grotesk'] text-lg lg:text-xl font-bold bg-gradient-to-r from-[#D4A853] to-[#E8C47C] bg-clip-text text-transparent text-center px-2">
+          <div class="w-20 h-20 lg:w-24 lg:h-24 bg-gradient-to-br from-[#F5F0E6] to-[#EBE4D6] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300 border border-[#D4A853]/10">
+            <span class="font-['Space_Grotesk'] text-lg lg:text-xl font-bold bg-gradient-to-r from-[#D4A853] to-[#B8923E] bg-clip-text text-transparent text-center px-2">
               {partner.name.split(' ').map(n => n[0]).join('')}
             </span>
           </div>
-          <span class="font-semibold text-white/70 group-hover:text-[#D4A853] transition-colors duration-300">
+          <span class="font-semibold text-[#1A1A2E]/70 group-hover:text-[#B8923E] transition-colors duration-300">
             {partner.name}
           </span>
         </a>

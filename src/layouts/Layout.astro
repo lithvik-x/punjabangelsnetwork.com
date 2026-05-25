@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Punjab Angels Network - India's foremost platform dedicated to cultivating an startup ecosystem" />
@@ -18,7 +18,7 @@ const { title } = Astro.props;
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>{title}</title>
   </head>
-  <body class="bg-[#0A0A0B] text-white">
+  <body class="bg-[#F5F0E6] text-[#1A1A2E]">
     <slot />
     <script>
       // Intersection Observer for scroll animations
@@ -70,8 +70,8 @@ const { title } = Astro.props;
     </script>
     <style>
       .navbar-scrolled {
-        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.2);
-        background-color: rgba(10, 10, 11, 0.95);
+        box-shadow: 0 10px 15px -3px rgb(26 26 46 / 0.08), 0 4px 6px -4px rgb(26 26 46 / 0.05);
+        background-color: rgba(245, 240, 230, 0.95);
         backdrop-filter: blur(12px);
       }
     </style>

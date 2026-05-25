@@ -23,38 +23,38 @@ const eventTypes = [
 ];
 ---
 
-<section class="py-24 lg:py-32 bg-[#0A0A0B] relative overflow-hidden">
+<section class="py-24 lg:py-32 bg-[#F5F0E6] relative overflow-hidden">
   <!-- Subtle grid pattern -->
   <div class="absolute inset-0 opacity-[0.02]" style="background-image: linear-gradient(#D4A853 1px, transparent 1px), linear-gradient(90deg, #D4A853 1px, transparent 1px); background-size: 60px 60px;"></div>
 
-  <!-- Ambient glow -->
-  <div class="absolute bottom-0 left-1/4 w-[700px] h-[700px] bg-[#D4A853]/4 rounded-full blur-[200px]"></div>
+  <!-- Ambient warm glow -->
+  <div class="absolute bottom-0 left-1/4 w-[700px] h-[700px] bg-[#D4A853]/8 rounded-full blur-[200px]"></div>
 
   <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
     <div class="text-center mb-16 reveal">
       <div class="inline-flex items-center gap-3 mb-6">
-        <div class="w-12 h-[1px] bg-[#D4A853]"></div>
-        <span class="text-[#D4A853] text-sm font-medium tracking-[0.3em] uppercase font-['Space_Grotesk']">Networking</span>
-        <div class="w-12 h-[1px] bg-[#D4A853]"></div>
+        <div class="w-12 h-[2px] bg-[#D4A853]"></div>
+        <span class="text-[#B8923E] text-sm font-medium tracking-[0.3em] uppercase font-['Space_Grotesk']">Networking</span>
+        <div class="w-12 h-[2px] bg-[#D4A853]"></div>
       </div>
-      <h2 class="font-['Space_Grotesk'] text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4">
+      <h2 class="font-['Space_Grotesk'] text-4xl lg:text-5xl xl:text-6xl font-bold text-[#1A1A2E] mb-4">
         Join Our
-        <span class="bg-gradient-to-r from-[#D4A853] via-[#E8C47C] to-[#D4A853] bg-clip-text text-transparent"> Events Network</span> for Success
+        <span class="bg-gradient-to-r from-[#D4A853] via-[#C9993D] to-[#B8923E] bg-clip-text text-transparent"> Events Network</span> for Success
       </h2>
-      <p class="text-white/50 mt-4">Explore an Insight to our proficiency</p>
+      <p class="text-[#1A1A2E]/50 mt-4">Explore an Insight to our proficiency</p>
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
       {eventTypes.map((event, index) => (
         <div
-          class="bg-[#1A1A1C] rounded-2xl p-6 border border-white/5 hover:border-[#D4A853]/30 transition-all duration-300 reveal"
+          class="bg-white rounded-2xl p-6 border border-[#D4A853]/10 hover:border-[#D4A853]/30 transition-all duration-300 reveal hover:shadow-lg"
           style={`animation-delay: ${index * 100}ms;`}
         >
-          <h3 class="font-['Space_Grotesk'] text-lg lg:text-xl font-semibold text-[#D4A853] mb-2">{event.title}</h3>
-          <p class="text-white/50 text-sm mb-4">{event.location}</p>
+          <h3 class="font-['Space_Grotesk'] text-lg lg:text-xl font-semibold text-[#B8923E] mb-2">{event.title}</h3>
+          <p class="text-[#1A1A2E]/50 text-sm mb-4">{event.location}</p>
           <div class="space-y-2">
             {event.places.map(place => (
-              <div class="flex items-center gap-2 text-white/70">
+              <div class="flex items-center gap-2 text-[#1A1A2E]/70">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#D4A853]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
                 </svg>

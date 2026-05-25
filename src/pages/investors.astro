@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TopBar from '../components/TopBar.astro';
+import Navbar from '../components/Navbar.astro';
+import Investors from '../components/Investors.astro';
+import Stats from '../components/Stats.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="For Investors">
+  <TopBar />
+  <Navbar />
+  <main>
+    <!-- Investors Hero -->
+    <section class="relative py-32 lg:py-48 bg-[#FAF8F5] overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.015]" style="background-image: linear-gradient(#B8963E 1px, transparent 1px), linear-gradient(90deg, #B8963E 1px, transparent 1px); background-size: 100px 100px;"></div>
+
+      <div class="relative max-w-[1600px] mx-auto px-8 lg:px-16 text-center">
+        <div class="flex items-center justify-center gap-4 mb-6">
+          <div class="w-12 h-[1px] bg-gradient-to-r from-transparent to-[#B8963E]"></div>
+          <span class="text-[#B8963E] text-xs font-medium tracking-[0.3em] uppercase font-['Jost']">Invest</span>
+          <div class="w-12 h-[1px] bg-gradient-to-l from-transparent to-[#B8963E]"></div>
+        </div>
+        <h1 class="font-['Bodoni_Moda'] text-5xl sm:text-6xl lg:text-7xl font-medium text-[#1A1817] leading-[1.1] tracking-tight">
+          For <span class="text-gold-gradient">Investors</span>
+        </h1>
+        <p class="mt-6 text-lg lg:text-xl text-[#1A1817]/60 max-w-2xl mx-auto font-['Jost']">
+          Discover promising startups and exclusive investment opportunities with Punjab Angels Network.
+        </p>
+      </div>
+    </section>
+
+    <Investors />
+    <Stats />
+
+    <!-- Investment Benefits -->
+    <section class="py-24 lg:py-32 bg-white">
+      <div class="max-w-[1600px] mx-auto px-8 lg:px-16">
+        <div class="text-center mb-16">
+          <h2 class="font-['Bodoni_Moda'] text-4xl lg:text-5xl font-medium text-[#1A1817]">Why Invest With Us?</h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-[#FAF8F5] rounded-3xl p-8 border border-[#1A1817]/5 hover:border-[#B8963E]/20 transition-all duration-500">
+            <div class="w-16 h-16 bg-[#B8963E]/10 rounded-2xl flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+              </svg>
+            </div>
+            <h3 class="font-['Bodoni_Moda'] text-2xl font-medium text-[#1A1817] mb-4">Due Diligence</h3>
+            <p class="text-[#1A1817]/60 font-['Jost']">Expert counseling and strategic insights for informed investment decisions.</p>
+          </div>
+
+          <div class="bg-[#FAF8F5] rounded-3xl p-8 border border-[#1A1817]/5 hover:border-[#B8963E]/20 transition-all duration-500">
+            <div class="w-16 h-16 bg-[#B8963E]/10 rounded-2xl flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+              </svg>
+            </div>
+            <h3 class="font-['Bodoni_Moda'] text-2xl font-medium text-[#1A1817] mb-4">Network Access</h3>
+            <p class="text-[#1A1817]/60 font-['Jost']">Connect with 100+ investors and industry experts in our ecosystem.</p>
+          </div>
+
+          <div class="bg-[#FAF8F5] rounded-3xl p-8 border border-[#1A1817]/5 hover:border-[#B8963E]/20 transition-all duration-500">
+            <div class="w-16 h-16 bg-[#B8963E]/10 rounded-2xl flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="font-['Bodoni_Moda'] text-2xl font-medium text-[#1A1817] mb-4">Exclusive Deals</h3>
+            <p class="text-[#1A1817]/60 font-['Jost']">Access curated investment deals exclusively available to our network.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 lg:py-32 bg-[#1A1817]">
+      <div class="max-w-[1600px] mx-auto px-8 lg:px-16 text-center">
+        <h2 class="font-['Bodoni_Moda'] text-4xl lg:text-5xl font-medium text-white mb-6">Ready to Start Investing?</h2>
+        <p class="text-white/60 font-['Jost'] text-lg mb-10 max-w-2xl mx-auto">Join our network of visionary investors and discover promising startups.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/investor-enrollment" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#B8963E] text-white font-['Jost'] font-medium rounded-full hover:bg-[#B8963E]/90 transition-all">
+            <span>Become an Investor</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="/contact" class="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white font-['Jost'] font-medium rounded-full hover:bg-white/10 transition-all">
+            <span>Learn More</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

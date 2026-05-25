@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TopBar from '../components/TopBar.astro';
+import Navbar from '../components/Navbar.astro';
+import Team from '../components/Team.astro';
+import Advisors from '../components/Advisors.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Our Team">
+  <TopBar />
+  <Navbar />
+  <main>
+    <!-- Team Hero -->
+    <section class="relative py-32 lg:py-48 bg-[#FAF8F5] overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.015]" style="background-image: linear-gradient(#B8963E 1px, transparent 1px), linear-gradient(90deg, #B8963E 1px, transparent 1px); background-size: 100px 100px;"></div>
+
+      <div class="relative max-w-[1600px] mx-auto px-8 lg:px-16 text-center">
+        <div class="flex items-center justify-center gap-4 mb-6">
+          <div class="w-12 h-[1px] bg-gradient-to-r from-transparent to-[#B8963E]"></div>
+          <span class="text-[#B8963E] text-xs font-medium tracking-[0.3em] uppercase font-['Jost']">People</span>
+          <div class="w-12 h-[1px] bg-gradient-to-l from-transparent to-[#B8963E]"></div>
+        </div>
+        <h1 class="font-['Bodoni_Moda'] text-5xl sm:text-6xl lg:text-7xl font-medium text-[#1A1817] leading-[1.1] tracking-tight">
+          Our <span class="text-gold-gradient">Team</span>
+        </h1>
+        <p class="mt-6 text-lg lg:text-xl text-[#1A1817]/60 max-w-2xl mx-auto font-['Jost']">
+          Meet the visionaries driving the Punjab Angels Network ecosystem.
+        </p>
+      </div>
+    </section>
+
+    <Team />
+    <Advisors />
+
+    <!-- Investors Section -->
+    <section class="py-24 lg:py-32 bg-[#FAF8F5]">
+      <div class="max-w-[1600px] mx-auto px-8 lg:px-16">
+        <div class="text-center mb-16">
+          <span class="text-[#B8963E] text-xs font-medium tracking-[0.3em] uppercase font-['Jost']">Network</span>
+          <h2 class="font-['Bodoni_Moda'] text-4xl lg:text-5xl font-medium text-[#1A1817] mt-4">Our Investors</h2>
+          <p class="mt-4 text-[#1A1817]/60 font-['Jost'] max-w-2xl mx-auto">A network of 100+ visionary investors supporting the startup ecosystem.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {['Amit Madaan', 'Saurav Munjal', 'Mitesh Nandlaskar', 'Ramanathan K', 'Tushar Kapoor', 'Rajesh Singla', 'Amit Singal', 'Suresh Jain', 'Sundeep Gaba', 'Vishal Gandhi', 'Vishal Kedia', 'Gaurav Sharma', 'CA Apurv Bansal', 'Nikhil Doda', 'Vishal Sood', 'Manoj Kumar', 'Vivek Utreja', 'Rajesh Azad', 'Lehar Gandhi', 'Nikhil Gupta', 'Lalit Kumar Bansal', 'Mr. Mandeep Singh', 'Mandeep Sodhi', 'Mr. Puneet Verma', 'Ravjot Ahuluwalia', 'Sunil Khullar', 'Angad Bindra', 'Sanjay Aggarwal', 'Kiran Kurwade', 'Mr. Advait Upadhaya', 'Ms. Shilpi Jain', 'Sumant Handa', 'Anil Channa', 'Gaurav Vashisht', 'Nikhil Garg', 'CA Manoj Lamba'].map(investor => (
+            <div class="bg-white rounded-2xl p-6 border border-[#1A1817]/5 hover:border-[#B8963E]/20 transition-all duration-300 text-center group">
+              <div class="w-16 h-16 bg-[#B8963E]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#B8963E]/20 transition-all">
+                <span class="font-['Bodoni_Moda'] text-xl text-[#B8963E]">
+                  {investor.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                </span>
+              </div>
+              <p class="font-['Jost'] text-sm text-[#1A1817]/70">{investor}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="/investors" class="inline-flex items-center gap-2 text-[#B8963E] font-['Jost'] font-medium hover:underline">
+            <span>View All Investors</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

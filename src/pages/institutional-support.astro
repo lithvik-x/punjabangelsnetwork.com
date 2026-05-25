@@ -1,0 +1,199 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TopBar from '../components/TopBar.astro';
+import Navbar from '../components/Navbar.astro';
+import Ecosystem from '../components/Ecosystem.astro';
+import Partners from '../components/Partners.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Institutional Support">
+  <TopBar />
+  <Navbar />
+  <main>
+    <!-- Hero -->
+    <section class="relative py-32 lg:py-48 bg-[#FAF8F5] overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.015]" style="background-image: linear-gradient(#B8963E 1px, transparent 1px), linear-gradient(90deg, #B8963E 1px, transparent 1px); background-size: 100px 100px;"></div>
+
+      <div class="relative max-w-[1600px] mx-auto px-8 lg:px-16 text-center">
+        <div class="flex items-center justify-center gap-4 mb-6">
+          <div class="w-12 h-[1px] bg-gradient-to-r from-transparent to-[#B8963E]"></div>
+          <span class="text-[#B8963E] text-xs font-medium tracking-[0.3em] uppercase font-['Jost']">Support</span>
+          <div class="w-12 h-[1px] bg-gradient-to-l from-transparent to-[#B8963E]"></div>
+        </div>
+        <h1 class="font-['Bodoni_Moda'] text-5xl sm:text-6xl lg:text-7xl font-medium text-[#1A1817] leading-[1.1] tracking-tight">
+          Institutional <span class="text-gold-gradient">Support</span>
+        </h1>
+        <p class="mt-6 text-lg lg:text-xl text-[#1A1817]/60 max-w-2xl mx-auto font-['Jost']">
+          Comprehensive support services for startups from application to growth.
+        </p>
+      </div>
+    </section>
+
+    <!-- Startup Services -->
+    <section class="py-24 lg:py-32 bg-white">
+      <div class="max-w-[1600px] mx-auto px-8 lg:px-16">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <span class="text-[#B8963E] text-xs font-medium tracking-[0.3em] uppercase font-['Jost']">Services</span>
+            <h2 class="font-['Bodoni_Moda'] text-4xl lg:text-5xl font-medium text-[#1A1817] mt-4 mb-8">Startup Services</h2>
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <div class="w-10 h-10 bg-[#B8963E]/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-['Jost'] font-medium text-[#1A1817] mb-2">Calling for Startup Applications</h3>
+                  <p class="text-[#1A1817]/60 font-['Jost']">We actively scout and invite promising startups to join our ecosystem.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-10 h-10 bg-[#B8963E]/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-['Jost'] font-medium text-[#1A1817] mb-2">Assistance with Startup Scrutiny</h3>
+                  <p class="text-[#1A1817]/60 font-['Jost']">Expert preliminary due diligence to assess viability and potential.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-10 h-10 bg-[#B8963E]/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-['Jost'] font-medium text-[#1A1817] mb-2">Financial Advisory</h3>
+                  <p class="text-[#1A1817]/60 font-['Jost']">Guidance on funding options, valuations, and investment structures.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-10 h-10 bg-[#B8963E]/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-['Jost'] font-medium text-[#1A1817] mb-2">R&D Consultancy</h3>
+                  <p class="text-[#1A1817]/60 font-['Jost']">Technical expertise and research & development support.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#FAF8F5] rounded-3xl p-8 lg:p-12 border border-[#1A1817]/5">
+            <h3 class="font-['Bodoni_Moda'] text-2xl font-medium text-[#1A1817] mb-6">Additional Services</h3>
+            <ul class="space-y-4">
+              <li class="flex items-center gap-3 text-[#1A1817]/70 font-['Jost']">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                Market Research Support
+              </li>
+              <li class="flex items-center gap-3 text-[#1A1817]/70 font-['Jost']">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                Legal Services
+              </li>
+              <li class="flex items-center gap-3 text-[#1A1817]/70 font-['Jost']">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                Accounting & Compliance
+              </li>
+              <li class="flex items-center gap-3 text-[#1A1817]/70 font-['Jost']">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                Mentorship Programs
+              </li>
+              <li class="flex items-center gap-3 text-[#1A1817]/70 font-['Jost']">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                Networking Events
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marketing Support -->
+    <section class="py-24 lg:py-32 bg-[#FAF8F5]">
+      <div class="max-w-[1600px] mx-auto px-8 lg:px-16">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="order-2 lg:order-1 bg-[#1A1817] rounded-3xl p-8 lg:p-12">
+            <h3 class="font-['Bodoni_Moda'] text-2xl font-medium text-white mb-6">Marketing Support</h3>
+            <ul class="space-y-4">
+              <li class="flex items-center gap-3 text-white/70 font-['Jost']">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                Social Media Management (Including Setup)
+              </li>
+              <li class="flex items-center gap-3 text-white/70 font-['Jost']">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                Regular Content Posting on Social Media
+              </li>
+              <li class="flex items-center gap-3 text-white/70 font-['Jost']">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                Brand Development & Strategy
+              </li>
+              <li class="flex items-center gap-3 text-white/70 font-['Jost']">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                PR & Media Relations
+              </li>
+              <li class="flex items-center gap-3 text-white/70 font-['Jost']">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                Website Development Support
+              </li>
+            </ul>
+          </div>
+          <div class="order-1 lg:order-2">
+            <span class="text-[#B8963E] text-xs font-medium tracking-[0.3em] uppercase font-['Jost']">Marketing</span>
+            <h2 class="font-['Bodoni_Moda'] text-4xl lg:text-5xl font-medium text-[#1A1817] mt-4 mb-8">Marketing Support</h2>
+            <p class="text-[#1A1817]/60 font-['Jost'] text-lg leading-relaxed">
+              We help startups build their brand presence and reach their target audience through comprehensive marketing support. From social media management to PR, we've got you covered.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Ecosystem />
+    <Partners />
+
+    <!-- CTA -->
+    <section class="py-24 lg:py-32 bg-[#1A1817]">
+      <div class="max-w-[1600px] mx-auto px-8 lg:px-16 text-center">
+        <h2 class="font-['Bodoni_Moda'] text-4xl lg:text-5xl font-medium text-white mb-6">Get Institutional Support</h2>
+        <p class="text-white/60 font-['Jost'] text-lg mb-10 max-w-2xl mx-auto">Access comprehensive support services for your startup journey.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/apply" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#B8963E] text-white font-['Jost'] font-medium rounded-full hover:bg-[#B8963E]/90 transition-all">
+            <span>Apply Now</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="/contact" class="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white font-['Jost'] font-medium rounded-full hover:bg-white/10 transition-all">
+            <span>Contact Us</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

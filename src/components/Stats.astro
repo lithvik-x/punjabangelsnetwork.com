@@ -7,19 +7,19 @@ const stats = [
 ];
 ---
 
-<section class="py-28 lg:py-40 bg-[#1A1A2E] relative overflow-hidden">
+<section class="py-32 lg:py-48 bg-[#1A1817] relative overflow-hidden">
   <!-- Sophisticated pattern -->
-  <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(#D4A853 1px, transparent 1px), linear-gradient(90deg, #D4A853 1px, transparent 1px); background-size: 80px 80px;"></div>
+  <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(#B8963E 1px, transparent 1px), linear-gradient(90deg, #B8963E 1px, transparent 1px); background-size: 100px 100px;"></div>
 
   <!-- Ambient glows -->
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[#D4A853]/8 rounded-full blur-[250px]"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[#B8963E]/8 rounded-full blur-[250px]"></div>
 
-  <div class="relative max-w-[1600px] mx-auto px-6 lg:px-8">
+  <div class="relative max-w-[1600px] mx-auto px-8 lg:px-16">
     <!-- Section header -->
     <div class="text-center mb-20 reveal">
-      <h2 class="font-['Space_Grotesk'] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white">
+      <h2 class="font-['Bodoni_Moda'] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-medium text-white">
         Join your hands with us for a
-        <span class="bg-gradient-to-r from-[#D4A853] via-[#C9993D] to-[#B8923E] bg-clip-text text-transparent"> better life and future</span>
+        <span class="text-gold-gradient"> better life and future</span>
       </h2>
     </div>
 
@@ -27,24 +27,24 @@ const stats = [
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
       {stats.map((stat, index) => (
         <div
-          class="group relative text-center p-8 lg:p-10 bg-white/[0.03] backdrop-blur-xl rounded-3xl border border-white/[0.08] hover:border-[#D4A853]/40 transition-all duration-500 reveal hover:bg-white/[0.06]"
+          class="group relative text-center p-8 lg:p-10 bg-white/[0.03] backdrop-blur-xl rounded-3xl border border-white/[0.08] hover:border-[#B8963E]/40 transition-all duration-500 reveal hover:bg-white/[0.06]"
           style={`animation-delay: ${index * 100}ms;`}
         >
           <!-- Inner gradient glow on hover -->
-          <div class="absolute inset-0 bg-gradient-to-br from-[#D4A853]/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="absolute inset-0 bg-gradient-to-br from-[#B8963E]/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
           <!-- Icon with gradient background -->
-          <div class="relative w-16 h-16 lg:w-18 lg:h-18 bg-gradient-to-br from-[#D4A853]/20 to-[#D4A853]/5 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 lg:w-9 lg:h-9 text-[#D4A853]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <div class="relative w-16 h-16 bg-gradient-to-br from-[#B8963E]/20 to-[#B8963E]/5 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 lg:w-9 lg:h-9 text-[#B8963E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d={stat.icon}/>
             </svg>
           </div>
 
           <!-- Value with gradient text -->
-          <span class="relative font-['Space_Grotesk'] text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-[#D4A853] to-[#C9993D] bg-clip-text text-transparent block mb-3 group-hover:scale-105 transition-transform duration-500">{stat.value}</span>
+          <span class="relative font-['Bodoni_Moda'] text-4xl lg:text-5xl xl:text-6xl font-medium bg-gradient-to-r from-[#B8963E] to-[#D4A853] bg-clip-text text-transparent block mb-3 group-hover:scale-105 transition-transform duration-500">{stat.value}</span>
 
           <!-- Label -->
-          <span class="text-white/50 text-sm lg:text-base font-medium tracking-wide">{stat.label}</span>
+          <span class="text-white/50 text-sm lg:text-base font-['Jost'] font-light tracking-wide">{stat.label}</span>
         </div>
       ))}
     </div>

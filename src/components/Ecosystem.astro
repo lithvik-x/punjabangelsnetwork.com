@@ -18,25 +18,23 @@ const ecosystem = [
 ];
 ---
 
-<section class="py-28 lg:py-40 bg-[#EBE4D6] relative overflow-hidden">
-  <!-- Sophisticated grid pattern -->
-  <div class="absolute inset-0 opacity-[0.02]" style="background-image: linear-gradient(#D4A853 1px, transparent 1px), linear-gradient(90deg, #D4A853 1px, transparent 1px); background-size: 80px 80px;"></div>
+<section class="py-32 lg:py-48 bg-[#E8E4DF] relative overflow-hidden">
+  <!-- Subtle texture -->
+  <div class="absolute inset-0 opacity-[0.015]" style="background-image: linear-gradient(#B8963E 1px, transparent 1px), linear-gradient(90deg, #B8963E 1px, transparent 1px); background-size: 100px 100px;"></div>
 
   <!-- Ambient glows -->
-  <div class="absolute top-1/3 left-0 w-[700px] h-[700px] bg-[#D4A853]/6 rounded-full blur-[200px]"></div>
-  <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#B8923E]/5 rounded-full blur-[150px]"></div>
+  <div class="absolute top-1/3 left-0 w-[700px] h-[700px] bg-[#B8963E]/5 rounded-full blur-[200px]"></div>
 
-  <div class="relative max-w-[1600px] mx-auto px-6 lg:px-8">
-    <!-- Section header -->
+  <div class="relative max-w-[1600px] mx-auto px-8 lg:px-16">
+    <!-- Section header - Centered editorial -->
     <div class="text-center mb-20 reveal">
-      <div class="inline-flex items-center gap-4 mb-8">
-        <div class="w-14 h-[2px] bg-gradient-to-r from-transparent to-[#D4A853]"></div>
-        <span class="text-[#B8923E] text-sm font-semibold tracking-[0.35em] uppercase font-['Space_Grotesk']">Ecosystem</span>
-        <div class="w-14 h-[2px] bg-gradient-to-l from-transparent to-[#D4A853]"></div>
+      <div class="flex items-center justify-center gap-4 mb-8">
+        <div class="w-16 h-[1px] bg-gradient-to-r from-transparent to-[#B8963E]"></div>
+        <span class="text-[#B8963E] text-xs font-['Jost'] font-medium tracking-[0.3em] uppercase">Ecosystem</span>
+        <div class="w-16 h-[1px] bg-gradient-to-l from-transparent to-[#B8963E]"></div>
       </div>
-      <h2 class="font-['Space_Grotesk'] text-4xl lg:text-5xl xl:text-6xl font-bold text-[#1A1A2E] mb-6">
-        Building
-        <span class="bg-gradient-to-r from-[#D4A853] via-[#C9993D] to-[#B8923E] bg-clip-text text-transparent"> Entrepreneurship</span> Ecosystem
+      <h2 class="font-['Bodoni_Moda'] text-4xl lg:text-5xl xl:text-6xl font-medium text-[#1A1817] mb-6">
+        Building <span class="text-gold-gradient">Entrepreneurship</span> Ecosystem
       </h2>
     </div>
 
@@ -44,36 +42,36 @@ const ecosystem = [
     <div class="grid md:grid-cols-3 gap-8 lg:gap-10">
       {ecosystem.map((item, index) => (
         <div
-          class="group relative bg-white/90 backdrop-blur-xl rounded-[2rem] p-10 lg:p-12 border border-[#D4A853]/10 hover:border-[#D4A853]/30 transition-all duration-500 reveal hover:shadow-[0_0_60px_rgba(212,168,83,0.15)] hover:-translate-y-3 text-center overflow-hidden"
+          class="group relative bg-white/90 backdrop-blur-xl rounded-3xl p-10 lg:p-12 border border-[#1A1817]/5 hover:border-[#B8963E]/30 transition-all duration-500 reveal hover:shadow-luxe hover:-translate-y-3 text-center overflow-hidden"
           style={`animation-delay: ${index * 150}ms;`}
         >
           <!-- Inner gradient glow -->
-          <div class="absolute inset-0 bg-gradient-to-br from-[#D4A853]/5 via-transparent to-[#B8923E]/5 rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="absolute inset-0 bg-gradient-to-br from-[#B8963E]/5 via-transparent to-[#96751C]/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
           <!-- Decorative corner -->
-          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#D4A853]/10 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:from-[#D4A853]/20 transition-all duration-500"></div>
+          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#B8963E]/10 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:from-[#B8963E]/20 transition-all duration-500"></div>
 
           <!-- Icon -->
-          <div class="relative w-22 h-22 bg-gradient-to-br from-[#D4A853]/15 via-[#D4A853]/10 to-transparent rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-11 h-11 text-[#B8923E] group-hover:text-[#D4A853] transition-colors duration-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <div class="relative w-20 h-20 bg-gradient-to-br from-[#B8963E]/15 via-[#B8963E]/10 to-transparent rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-[#B8963E] group-hover:text-[#D4A853] transition-colors duration-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d={item.icon}/>
             </svg>
           </div>
 
           <!-- Title -->
-          <h3 class="relative font-['Space_Grotesk'] text-2xl lg:text-3xl font-bold text-[#1A1A2E] mb-5 group-hover:text-[#B8923E] transition-colors duration-300">{item.title}</h3>
+          <h3 class="relative font-['Bodoni_Moda'] text-2xl lg:text-3xl font-medium text-[#1A1817] mb-5 group-hover:text-[#B8963E] transition-colors duration-300">{item.title}</h3>
 
           <!-- Description -->
-          <p class="relative text-[#1A1A2E]/50 mb-8 leading-relaxed">{item.description}</p>
+          <p class="relative text-[#1A1817]/50 mb-8 leading-relaxed font-['Jost'] font-light">{item.description}</p>
 
           <!-- CTA -->
           <a
             href="#"
-            class="relative inline-flex items-center gap-2.5 text-[#B8923E] font-semibold group-hover:text-[#D4A853] transition-colors duration-300"
+            class="relative inline-flex items-center gap-2.5 text-[#B8963E] font-['Jost'] font-medium group-hover:text-[#D4A853] transition-colors duration-300 hover-underline"
           >
-            <span class="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 group-hover:after:w-full">Learn More</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+            <span>Learn More</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </a>
         </div>
@@ -84,11 +82,11 @@ const ecosystem = [
     <div class="text-center mt-20 reveal">
       <a
         href="/contact"
-        class="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-[#D4A853] to-[#B8923E] text-white font-semibold rounded-full hover:shadow-[0_0_50px_rgba(212,168,83,0.45)] transition-all duration-500 hover:-translate-y-1"
+        class="group inline-flex items-center gap-3 px-10 py-5 bg-[#1A1817] text-white font-['Jost'] font-medium rounded-full hover:shadow-luxe transition-all duration-500 hover:-translate-y-1"
       >
         <span>Talk With Us</span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
         </svg>
       </a>
     </div>

@@ -2,22 +2,18 @@
 @plugin "daisyui";
 
 @theme {
-  --font-display: "Space Grotesk", sans-serif;
-  --font-body: "Plus Jakarta Sans", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
+  --font-display: "Bodoni Moda", serif;
+  --font-body: "Jost", sans-serif;
 
-  --color-gold: #D4A853;
-  --color-gold-dark: #B8923E;
-  --color-gold-light: #E8C87A;
-  --color-charcoal: #1A1A2E;
-  --color-charcoal-light: #2D2D44;
-  --color-cream: #E8DCC4;
-  --color-paper: #FDFBF7;
-  --color-surface: #F5F0E6;
-  --color-surface-dark: #EBE4D6;
-  --color-dark: #0A0A0B;
-  --color-dark-secondary: #111113;
-  --color-success: #4A7C59;
+  --color-gold: #B8963E;
+  --color-gold-light: #D4A853;
+  --color-gold-dark: #96751C;
+  --color-charcoal: #1A1817;
+  --color-charcoal-light: #2D2926;
+  --color-cream: #F5F0E6;
+  --color-paper: #FAF8F5;
+  --color-surface: #FAF8F5;
+  --color-warm-gray: #E8E4DF;
 }
 
 @layer base {
@@ -26,11 +22,15 @@
     font-family: var(--font-body);
     background-color: var(--color-surface);
     color: var(--color-charcoal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     color: var(--color-charcoal);
+    font-weight: 500;
+    letter-spacing: -0.02em;
   }
 
   body {
@@ -46,23 +46,40 @@
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-surface-dark);
+  background: var(--color-warm-gray);
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--color-gold);
-  border-radius: 4px;
+  border-radius: 3px;
+}
+
+/* Premium text styles */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Gold gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, var(--color-gold-dark) 0%, var(--color-gold) 50%, var(--color-gold-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -70,58 +87,68 @@
   }
 }
 
-@keyframes fade-in-up {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
 }
 
-@keyframes pulse-gold {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(212, 168, 83, 0.4); }
-  50% { box-shadow: 0 0 30px 10px rgba(212, 168, 83, 0.2); }
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(184, 150, 62, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px 10px rgba(184, 150, 62, 0.15);
+  }
 }
 
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
 }
 
-.animate-fade-in-up {
-  animation: fade-in-up 0.8s ease-out forwards;
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
 }
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
 
-.animate-pulse-gold {
-  animation: pulse-gold 2s ease-in-out infinite;
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
 }
-
-.animate-spin-slow {
-  animation: spin-slow 30s linear infinite;
-}
-
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
-.delay-500 { animation-delay: 500ms; }
-.delay-600 { animation-delay: 600ms; }
 
 /* Scroll-triggered animations */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.visible {
@@ -129,17 +156,26 @@
   transform: translateY(0);
 }
 
-/* Gold gradient text */
-.text-gold-gradient {
-  background: linear-gradient(135deg, var(--color-gold) 0%, #F4D793 50%, var(--color-gold-dark) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Gold text */
-.text-gold {
-  color: var(--color-gold);
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Carousel styles */
@@ -157,18 +193,55 @@
   scroll-snap-align: start;
 }
 
-/* Light theme card */
-.card-light {
-  background: white;
-  border: 1px solid rgba(212, 168, 83, 0.15);
-  box-shadow: 0 4px 20px rgba(26, 26, 46, 0.05);
+/* Glass morphism */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
-.card-hover {
-  transition: all 0.3s ease;
+.glass-dark {
+  background: rgba(26, 24, 23, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
-.card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(212, 168, 83, 0.15);
+/* Premium shadow */
+.shadow-luxe {
+  box-shadow: 0 25px 50px -12px rgba(26, 24, 23, 0.15);
+}
+
+.shadow-luxe-sm {
+  box-shadow: 0 10px 40px -10px rgba(26, 24, 23, 0.1);
+}
+
+/* Hover underline animation */
+.hover-underline {
+  position: relative;
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-underline:hover::after {
+  width: 100%;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

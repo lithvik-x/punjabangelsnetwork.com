@@ -39,34 +39,32 @@ const investors = [
 ];
 ---
 
-<section class="py-28 lg:py-40 bg-[#F5F0E6] relative overflow-hidden">
-  <!-- Sophisticated grid pattern -->
-  <div class="absolute inset-0 opacity-[0.02]" style="background-image: linear-gradient(#D4A853 1px, transparent 1px), linear-gradient(90deg, #D4A853 1px, transparent 1px); background-size: 80px 80px;"></div>
+<section class="py-32 lg:py-48 bg-[#FAF8F5] relative overflow-hidden">
+  <!-- Subtle texture -->
+  <div class="absolute inset-0 opacity-[0.015]" style="background-image: linear-gradient(#B8963E 1px, transparent 1px), linear-gradient(90deg, #B8963E 1px, transparent 1px); background-size: 100px 100px;"></div>
 
   <!-- Ambient glows -->
-  <div class="absolute bottom-0 right-1/4 w-[800px] h-[800px] bg-[#D4A853]/6 rounded-full blur-[200px]"></div>
-  <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-[#B8923E]/5 rounded-full blur-[150px]"></div>
+  <div class="absolute bottom-0 right-1/4 w-[800px] h-[800px] bg-[#B8963E]/5 rounded-full blur-[200px]"></div>
 
-  <div class="relative max-w-[1600px] mx-auto px-6 lg:px-8">
+  <div class="relative max-w-[1600px] mx-auto px-8 lg:px-16">
     <!-- Header with premium styling -->
     <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-14 reveal">
       <div>
-        <div class="inline-flex items-center gap-4 mb-6">
-          <div class="w-14 h-[2px] bg-gradient-to-r from-transparent to-[#D4A853]"></div>
-          <span class="text-[#B8923E] text-sm font-semibold tracking-[0.35em] uppercase font-['Space_Grotesk']">Our Network</span>
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-12 h-[1px] bg-gradient-to-r from-[#B8963E] to-transparent"></div>
+          <span class="text-[#B8963E] text-xs font-['Jost'] font-medium tracking-[0.3em] uppercase">Our Network</span>
         </div>
-        <h2 class="font-['Space_Grotesk'] text-4xl lg:text-5xl xl:text-6xl font-bold text-[#1A1A2E] leading-tight">
-          Our Network of
-          <span class="bg-gradient-to-r from-[#D4A853] via-[#C9993D] to-[#B8923E] bg-clip-text text-transparent"> Visionary Investors</span>
+        <h2 class="font-['Bodoni_Moda'] text-4xl lg:text-5xl xl:text-6xl font-medium text-[#1A1817] leading-tight">
+          Our Network of <span class="text-gold-gradient">Visionary Investors</span>
         </h2>
       </div>
       <a
         href="/our-team"
-        class="group inline-flex items-center gap-3 px-8 py-4 border-2 border-[#D4A853] text-[#B8923E] font-semibold rounded-full hover:bg-[#D4A853] hover:text-white hover:shadow-[0_0_30px_rgba(212,168,83,0.3)] transition-all duration-500"
+        class="group inline-flex items-center gap-3 px-7 py-3.5 border border-[#B8963E] text-[#B8963E] font-['Jost'] font-medium rounded-full hover:bg-[#B8963E] hover:text-white hover:shadow-luxe-sm transition-all duration-500"
       >
         See All Investors
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
         </svg>
       </a>
     </div>
@@ -75,17 +73,17 @@ const investors = [
     <div class="carousel-container flex gap-6 overflow-x-auto pb-6 -mx-4 px-4 scrollbar-hide">
       {investors.map((investor) => (
         <div class="carousel-item flex-shrink-0">
-          <div class="w-48 h-48 bg-white/90 backdrop-blur-xl rounded-3xl flex flex-col items-center justify-center mb-4 border border-[#D4A853]/10 hover:border-[#D4A853]/40 hover:shadow-[0_0_40px_rgba(212,168,83,0.15)] hover:-translate-y-2 transition-all duration-500 group">
+          <div class="w-48 h-48 bg-white/90 backdrop-blur-xl rounded-3xl flex flex-col items-center justify-center mb-4 border border-[#1A1817]/5 hover:border-[#B8963E]/30 hover:shadow-luxe-sm hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
             <!-- Gradient background on hover -->
-            <div class="absolute inset-0 bg-gradient-to-br from-[#D4A853]/10 via-transparent to-[#B8923E]/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-[#B8963E]/10 via-transparent to-[#96751C]/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-            <div class="relative w-full h-full flex items-center justify-center bg-gradient-to-br from-[#D4A853]/8 to-transparent rounded-3xl">
-              <span class="font-['Space_Grotesk'] text-2xl font-bold bg-gradient-to-r from-[#D4A853] to-[#B8923E] bg-clip-text text-transparent">
+            <div class="relative w-full h-full flex items-center justify-center bg-gradient-to-br from-[#B8963E]/8 to-transparent rounded-3xl">
+              <span class="font-['Bodoni_Moda'] text-2xl font-medium bg-gradient-to-r from-[#B8963E] to-[#96751C] bg-clip-text text-transparent">
                 {investor.split(' ').map(n => n[0]).slice(0, 2).join('')}
               </span>
             </div>
           </div>
-          <p class="text-[#1A1A2E]/60 text-sm font-medium text-center px-2 truncate">{investor}</p>
+          <p class="text-[#1A1817]/60 text-sm font-['Jost'] font-light text-center px-2 truncate">{investor}</p>
         </div>
       ))}
     </div>

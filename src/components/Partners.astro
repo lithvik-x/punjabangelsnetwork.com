@@ -7,27 +7,25 @@ const partners = [
 ];
 ---
 
-<section class="py-28 lg:py-40 bg-[#EBE4D6] relative overflow-hidden">
-  <!-- Sophisticated grid pattern -->
-  <div class="absolute inset-0 opacity-[0.02]" style="background-image: linear-gradient(#D4A853 1px, transparent 1px), linear-gradient(90deg, #D4A853 1px, transparent 1px); background-size: 80px 80px;"></div>
+<section class="py-32 lg:py-48 bg-[#E8E4DF] relative overflow-hidden">
+  <!-- Subtle texture -->
+  <div class="absolute inset-0 opacity-[0.015]" style="background-image: linear-gradient(#B8963E 1px, transparent 1px), linear-gradient(90deg, #B8963E 1px, transparent 1px); background-size: 100px 100px;"></div>
 
   <!-- Ambient glows -->
-  <div class="absolute top-0 right-0 w-[700px] h-[700px] bg-[#D4A853]/6 rounded-full blur-[200px]"></div>
-  <div class="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-[#B8923E]/5 rounded-full blur-[150px]"></div>
+  <div class="absolute top-0 right-0 w-[700px] h-[700px] bg-[#B8963E]/5 rounded-full blur-[200px]"></div>
 
-  <div class="relative max-w-[1600px] mx-auto px-6 lg:px-8">
-    <!-- Section header -->
+  <div class="relative max-w-[1600px] mx-auto px-8 lg:px-16">
+    <!-- Section header - Centered editorial -->
     <div class="text-center mb-20 reveal">
-      <div class="inline-flex items-center gap-4 mb-8">
-        <div class="w-14 h-[2px] bg-gradient-to-r from-transparent to-[#D4A853]"></div>
-        <span class="text-[#B8923E] text-sm font-semibold tracking-[0.35em] uppercase font-['Space_Grotesk']">Collaborations</span>
-        <div class="w-14 h-[2px] bg-gradient-to-l from-transparent to-[#D4A853]"></div>
+      <div class="flex items-center justify-center gap-4 mb-8">
+        <div class="w-16 h-[1px] bg-gradient-to-r from-transparent to-[#B8963E]"></div>
+        <span class="text-[#B8963E] text-xs font-['Jost'] font-medium tracking-[0.3em] uppercase">Collaborations</span>
+        <div class="w-16 h-[1px] bg-gradient-to-l from-transparent to-[#B8963E]"></div>
       </div>
-      <h2 class="font-['Space_Grotesk'] text-4xl lg:text-5xl xl:text-6xl font-bold text-[#1A1A2E] mb-6">
-        Meet Our
-        <span class="bg-gradient-to-r from-[#D4A853] via-[#C9993D] to-[#B8923E] bg-clip-text text-transparent"> Dynamic Partners</span>
+      <h2 class="font-['Bodoni_Moda'] text-4xl lg:text-5xl xl:text-6xl font-medium text-[#1A1817] mb-6">
+        Meet Our <span class="text-gold-gradient">Dynamic Partners</span>
       </h2>
-      <p class="text-[#1A1A2E]/50 mt-4 text-lg">Connect, Collaborate, Conquer</p>
+      <p class="text-[#1A1817]/50 mt-4 text-lg font-['Jost'] font-light">Connect, Collaborate, Conquer</p>
     </div>
 
     <!-- Partners grid with premium cards -->
@@ -35,24 +33,24 @@ const partners = [
       {partners.map((partner, index) => (
         <a
           href={partner.url || "#"}
-          class="group flex flex-col items-center justify-center p-8 lg:p-10 bg-white/90 backdrop-blur-xl rounded-[2rem] border border-[#D4A853]/10 hover:border-[#D4A853]/40 transition-all duration-500 reveal hover:shadow-[0_0_50px_rgba(212,168,83,0.15)] hover:-translate-y-3 overflow-hidden relative"
+          class="group flex flex-col items-center justify-center p-8 lg:p-10 bg-white/90 backdrop-blur-xl rounded-3xl border border-[#1A1817]/5 hover:border-[#B8963E]/30 transition-all duration-500 reveal hover:shadow-luxe hover:-translate-y-3 overflow-hidden relative"
           style={`animation-delay: ${index * 100}ms;`}
         >
           <!-- Inner gradient glow on hover -->
-          <div class="absolute inset-0 bg-gradient-to-br from-[#D4A853]/10 via-transparent to-[#B8923E]/10 rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="absolute inset-0 bg-gradient-to-br from-[#B8963E]/10 via-transparent to-[#96751C]/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
           <!-- Decorative element -->
-          <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-[#D4A853]/10 to-transparent rounded-full -translate-y-12 translate-x-12 group-hover:from-[#D4A853]/20 transition-all duration-500"></div>
+          <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-[#B8963E]/10 to-transparent rounded-full -translate-y-12 translate-x-12 group-hover:from-[#B8963E]/20 transition-all duration-500"></div>
 
           <!-- Logo container -->
-          <div class="relative w-24 h-24 bg-gradient-to-br from-[#F5F0E6] to-[#EBE4D6] rounded-3xl flex items-center justify-center mb-6 border border-[#D4A853]/15 group-hover:border-[#D4A853]/30 group-hover:scale-105 transition-all duration-500">
-            <span class="font-['Space_Grotesk'] text-xl font-bold bg-gradient-to-r from-[#D4A853] to-[#B8923E] bg-clip-text text-transparent text-center px-3">
+          <div class="relative w-24 h-24 bg-gradient-to-br from-[#FAF8F5] to-[#E8E4DF] rounded-3xl flex items-center justify-center mb-6 border border-[#B8963E]/15 group-hover:border-[#B8963E]/30 group-hover:scale-105 transition-all duration-500">
+            <span class="font-['Bodoni_Moda'] text-xl font-medium bg-gradient-to-r from-[#B8963E] to-[#96751C] bg-clip-text text-transparent text-center px-3">
               {partner.name.split(' ').map(n => n[0]).join('')}
             </span>
           </div>
 
           <!-- Name -->
-          <span class="relative font-semibold text-[#1A1A2E]/60 group-hover:text-[#B8923E] transition-colors duration-300 text-center">
+          <span class="relative font-['Jost'] font-medium text-[#1A1817]/60 group-hover:text-[#B8963E] transition-colors duration-300 text-center">
             {partner.name}
           </span>
         </a>

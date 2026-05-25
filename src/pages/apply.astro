@@ -1,0 +1,173 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TopBar from '../components/TopBar.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Apply Now">
+  <TopBar />
+  <Navbar />
+  <main>
+    <!-- Hero -->
+    <section class="relative py-32 lg:py-48 bg-[#FAF8F5] overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.015]" style="background-image: linear-gradient(#B8963E 1px, transparent 1px), linear-gradient(90deg, #B8963E 1px, transparent 1px); background-size: 100px 100px;"></div>
+
+      <div class="relative max-w-[1600px] mx-auto px-8 lg:px-16 text-center">
+        <div class="flex items-center justify-center gap-4 mb-6">
+          <div class="w-12 h-[1px] bg-gradient-to-r from-transparent to-[#B8963E]"></div>
+          <span class="text-[#B8963E] text-xs font-medium tracking-[0.3em] uppercase font-['Jost']">Start</span>
+          <div class="w-12 h-[1px] bg-gradient-to-l from-transparent to-[#B8963E]"></div>
+        </div>
+        <h1 class="font-['Bodoni_Moda'] text-5xl sm:text-6xl lg:text-7xl font-medium text-[#1A1817] leading-[1.1] tracking-tight">
+          Apply <span class="text-gold-gradient">Now</span>
+        </h1>
+        <p class="mt-6 text-lg lg:text-xl text-[#1A1817]/60 max-w-2xl mx-auto font-['Jost']">
+          Take the first step towards scaling your startup with Punjab Angels Network.
+        </p>
+      </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="py-24 lg:py-32 bg-white">
+      <div class="max-w-[1200px] mx-auto px-8 lg:px-16">
+        <div class="bg-[#FAF8F5] rounded-3xl p-8 lg:p-16 border border-[#1A1817]/5">
+          <div class="text-center mb-12">
+            <h2 class="font-['Bodoni_Moda'] text-3xl lg:text-4xl font-medium text-[#1A1817]">Startup Application</h2>
+            <p class="mt-4 text-[#1A1817]/60 font-['Jost']">Fill out the form below and our team will review your application.</p>
+          </div>
+
+          <form class="space-y-6">
+            <!-- Startup Details -->
+            <div class="bg-white rounded-2xl p-8 border border-[#1A1817]/5 mb-8">
+              <h3 class="font-['Bodoni_Moda'] text-xl font-medium text-[#1A1817] mb-6">Startup Details</h3>
+              <div class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">Startup Name *</label>
+                    <input type="text" required class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost']" placeholder="Your startup name">
+                  </div>
+                  <div>
+                    <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">Industry/Sector *</label>
+                    <select required class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost']">
+                      <option value="">Select industry</option>
+                      <option value="tech">Technology</option>
+                      <option value="healthcare">Healthcare</option>
+                      <option value="fintech">FinTech</option>
+                      <option value="ecommerce">E-Commerce</option>
+                      <option value="saas">SaaS</option>
+                      <option value="ai">AI/ML</option>
+                      <option value="consumer">Consumer Products</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">Startup Website/Social Link</label>
+                  <input type="url" class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost']" placeholder="https://">
+                </div>
+
+                <div>
+                  <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">Elevator Pitch *</label>
+                  <textarea rows="4" required class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost'] resize-none" placeholder="Brief description of your startup (max 500 characters)"></textarea>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">Stage *</label>
+                    <select required class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost']">
+                      <option value="">Select stage</option>
+                      <option value="idea">Idea Stage</option>
+                      <option value="mvp">MVP</option>
+                      <option value="beta">Beta/Testing</option>
+                      <option value="revenue">Early Revenue</option>
+                      <option value="growth">Growth Stage</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">Funding Required *</label>
+                    <select required class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost']">
+                      <option value="">Select range</option>
+                      <option value="seed">₹25 Lakh - ₹1 Crore</option>
+                      <option value="pre-a">₹1 Crore - ₹5 Crore</option>
+                      <option value="a">₹5 Crore - ₹15 Crore</option>
+                      <option value="b+">₹15 Crore+</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Founder Details -->
+            <div class="bg-white rounded-2xl p-8 border border-[#1A1817]/5 mb-8">
+              <h3 class="font-['Bodoni_Moda'] text-xl font-medium text-[#1A1817] mb-6">Founder Details</h3>
+              <div class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">Founder Name *</label>
+                    <input type="text" required class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost']" placeholder="Primary founder name">
+                  </div>
+                  <div>
+                    <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">Founder LinkedIn</label>
+                    <input type="url" class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost']" placeholder="LinkedIn profile URL">
+                  </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">Email Address *</label>
+                    <input type="email" required class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost']" placeholder="your@email.com">
+                  </div>
+                  <div>
+                    <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">Phone Number *</label>
+                    <input type="tel" required class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost']" placeholder="+91 XXXXX XXXXX">
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">City *</label>
+                  <input type="text" required class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost']" placeholder="Your city">
+                </div>
+              </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="bg-white rounded-2xl p-8 border border-[#1A1817]/5">
+              <h3 class="font-['Bodoni_Moda'] text-xl font-medium text-[#1A1817] mb-6">Additional Information</h3>
+              <div class="space-y-6">
+                <div>
+                  <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">How did you hear about us?</label>
+                  <select class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost']">
+                    <option value="">Select an option</option>
+                    <option value="social">Social Media</option>
+                    <option value="referral">Referral</option>
+                    <option value="event">Event</option>
+                    <option value="search">Search Engine</option>
+                    <option value="news">News/Press</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">Anything else you'd like to share?</label>
+                  <textarea rows="4" class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost'] resize-none" placeholder="Any additional information about your startup..."></textarea>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <input type="checkbox" required class="mt-1 accent-[#B8963E]">
+                  <span class="text-sm font-['Jost'] text-[#1A1817]/60">I agree to the <a href="#" class="text-[#B8963E] hover:underline">Terms & Conditions</a> and <a href="#" class="text-[#B8963E] hover:underline">Privacy Policy</a></span>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="w-full py-5 bg-[#1A1817] text-white font-['Jost'] font-medium tracking-wide rounded-full hover:bg-[#1A1817]/90 transition-all duration-300 hover:shadow-luxe">
+              Submit Application
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,168 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TopBar from '../components/TopBar.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Corporate Membership Enrollment">
+  <TopBar />
+  <Navbar />
+  <main>
+    <!-- Hero -->
+    <section class="relative py-32 lg:py-48 bg-[#FAF8F5] overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.015]" style="background-image: linear-gradient(#B8963E 1px, transparent 1px), linear-gradient(90deg, #B8963E 1px, transparent 1px); background-size: 100px 100px;"></div>
+
+      <div class="relative max-w-[1600px] mx-auto px-8 lg:px-16 text-center">
+        <div class="flex items-center justify-center gap-4 mb-6">
+          <div class="w-12 h-[1px] bg-gradient-to-r from-transparent to-[#B8963E]"></div>
+          <span class="text-[#B8963E] text-xs font-medium tracking-[0.3em] uppercase font-['Jost']">Partner</span>
+          <div class="w-12 h-[1px] bg-gradient-to-l from-transparent to-[#B8963E]"></div>
+        </div>
+        <h1 class="font-['Bodoni_Moda'] text-5xl sm:text-6xl lg:text-7xl font-medium text-[#1A1817] leading-[1.1] tracking-tight">
+          Corporate <span class="text-gold-gradient">Membership</span>
+        </h1>
+        <p class="mt-6 text-lg lg:text-xl text-[#1A1817]/60 max-w-2xl mx-auto font-['Jost']">
+          Join our corporate membership program and connect with the startup ecosystem.
+        </p>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="py-24 lg:py-32 bg-white">
+      <div class="max-w-[1600px] mx-auto px-8 lg:px-16">
+        <div class="text-center mb-16">
+          <h2 class="font-['Bodoni_Moda'] text-4xl lg:text-5xl font-medium text-[#1A1817]">Membership Benefits</h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-[#FAF8F5] rounded-3xl p-8 border border-[#1A1817]/5">
+            <div class="w-14 h-14 bg-[#B8963E]/10 rounded-2xl flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+              </svg>
+            </div>
+            <h3 class="font-['Bodoni_Moda'] text-xl font-medium text-[#1A1817] mb-3">Exclusive Events</h3>
+            <p class="text-[#1A1817]/60 font-['Jost']">Exclusive invites to curated networking events and pitch sessions.</p>
+          </div>
+
+          <div class="bg-[#FAF8F5] rounded-3xl p-8 border border-[#1A1817]/5">
+            <div class="w-14 h-14 bg-[#B8963E]/10 rounded-2xl flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+              </svg>
+            </div>
+            <h3 class="font-['Bodoni_Moda'] text-xl font-medium text-[#1A1817] mb-3">Learning Resources</h3>
+            <p class="text-[#1A1817]/60 font-['Jost']">Entry to a wealth of educational resources, online workshops, and webinars.</p>
+          </div>
+
+          <div class="bg-[#FAF8F5] rounded-3xl p-8 border border-[#1A1817]/5">
+            <div class="w-14 h-14 bg-[#B8963E]/10 rounded-2xl flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+              </svg>
+            </div>
+            <h3 class="font-['Bodoni_Moda'] text-xl font-medium text-[#1A1817] mb-3">Network Connections</h3>
+            <p class="text-[#1A1817]/60 font-['Jost']">Connect with a network of promising startups and investors.</p>
+          </div>
+
+          <div class="bg-[#FAF8F5] rounded-3xl p-8 border border-[#1A1817]/5">
+            <div class="w-14 h-14 bg-[#B8963E]/10 rounded-2xl flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+              </svg>
+            </div>
+            <h3 class="font-['Bodoni_Moda'] text-xl font-medium text-[#1A1817] mb-3">Workshops</h3>
+            <p class="text-[#1A1817]/60 font-['Jost']">Attend masterclasses and in-person workshops for hands-on learning.</p>
+          </div>
+
+          <div class="bg-[#FAF8F5] rounded-3xl p-8 border border-[#1A1817]/5">
+            <div class="w-14 h-14 bg-[#B8963E]/10 rounded-2xl flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+              </svg>
+            </div>
+            <h3 class="font-['Bodoni_Moda'] text-xl font-medium text-[#1A1817] mb-3">Workspace Access</h3>
+            <p class="text-[#1A1817]/60 font-['Jost']">Avail discounted co-working space and infrastructure support through our workspace partners.</p>
+          </div>
+
+          <div class="bg-[#FAF8F5] rounded-3xl p-8 border border-[#1A1817]/5">
+            <div class="w-14 h-14 bg-[#B8963E]/10 rounded-2xl flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#B8963E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
+              </svg>
+            </div>
+            <h3 class="font-['Bodoni_Moda'] text-xl font-medium text-[#1A1817] mb-3">Professional Services</h3>
+            <p class="text-[#1A1817]/60 font-['Jost']">Tap into cost-effective professional services provided by our partner organization.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enrollment Form -->
+    <section class="py-24 lg:py-32 bg-[#FAF8F5]">
+      <div class="max-w-[1200px] mx-auto px-8 lg:px-16">
+        <div class="bg-white rounded-3xl p-8 lg:p-16 shadow-luxe-sm border border-[#1A1817]/5">
+          <div class="text-center mb-12">
+            <h2 class="font-['Bodoni_Moda'] text-3xl lg:text-4xl font-medium text-[#1A1817]">Enroll as Corporate Member</h2>
+            <p class="mt-4 text-[#1A1817]/60 font-['Jost']">Fill out the form below and our team will get back to you.</p>
+          </div>
+
+          <form class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">Company Name *</label>
+                <input type="text" required class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost']" placeholder="Your company name">
+              </div>
+              <div>
+                <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">Industry *</label>
+                <input type="text" required class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost']" placeholder="Your industry">
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">Contact Person Name *</label>
+                <input type="text" required class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost']" placeholder="Contact person name">
+              </div>
+              <div>
+                <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">Designation *</label>
+                <input type="text" required class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost']" placeholder="Your designation">
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">Email Address *</label>
+                <input type="email" required class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost']" placeholder="your@company.com">
+              </div>
+              <div>
+                <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">Phone Number *</label>
+                <input type="tel" required class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost']" placeholder="+91 XXXXX XXXXX">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">Company Address *</label>
+              <textarea rows="3" required class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost'] resize-none" placeholder="Your company address"></textarea>
+            </div>
+
+            <div>
+              <label class="block text-sm font-['Jost'] text-[#1A1817]/60 mb-2">What are you looking for from this membership?</label>
+              <textarea rows="4" class="w-full px-5 py-4 bg-[#FAF8F5] border border-[#1A1817]/10 rounded-xl focus:border-[#B8963E] focus:outline-none focus:ring-2 focus:ring-[#B8963E]/20 transition-all font-['Jost'] resize-none" placeholder="Tell us about your expectations..."></textarea>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <input type="checkbox" required class="mt-1 accent-[#B8963E]">
+              <span class="text-sm font-['Jost'] text-[#1A1817]/60">I agree to the <a href="#" class="text-[#B8963E] hover:underline">Terms & Conditions</a> and <a href="#" class="text-[#B8963E] hover:underline">Privacy Policy</a></span>
+            </div>
+
+            <button type="submit" class="w-full py-5 bg-[#1A1817] text-white font-['Jost'] font-medium tracking-wide rounded-full hover:bg-[#1A1817]/90 transition-all duration-300 hover:shadow-luxe">
+              Submit Application
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

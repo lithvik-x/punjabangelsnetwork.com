@@ -21,44 +21,43 @@ const corporateBenefits = [
 ];
 ---
 
-<section class="py-28 lg:py-40 bg-[#EBE4D6] relative overflow-hidden">
-  <!-- Sophisticated grid pattern -->
-  <div class="absolute inset-0 opacity-[0.02]" style="background-image: linear-gradient(#D4A853 1px, transparent 1px), linear-gradient(90deg, #D4A853 1px, transparent 1px); background-size: 80px 80px;"></div>
+<section class="py-32 lg:py-48 bg-[#E8E4DF] relative overflow-hidden">
+  <!-- Subtle texture -->
+  <div class="absolute inset-0 opacity-[0.015]" style="background-image: linear-gradient(#B8963E 1px, transparent 1px), linear-gradient(90deg, #B8963E 1px, transparent 1px); background-size: 100px 100px;"></div>
 
   <!-- Ambient glows -->
-  <div class="absolute bottom-0 right-0 w-[800px] h-[800px] bg-[#D4A853]/6 rounded-full blur-[200px]"></div>
-  <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#B8923E]/5 rounded-full blur-[150px]"></div>
+  <div class="absolute bottom-0 right-0 w-[800px] h-[800px] bg-[#B8963E]/5 rounded-full blur-[200px]"></div>
 
-  <div class="relative max-w-[1600px] mx-auto px-6 lg:px-8">
-    <!-- Section header -->
+  <div class="relative max-w-[1600px] mx-auto px-8 lg:px-16">
+    <!-- Section header - Centered editorial -->
     <div class="text-center mb-20 reveal">
-      <div class="inline-flex items-center gap-4 mb-8">
-        <div class="w-14 h-[2px] bg-gradient-to-r from-transparent to-[#D4A853]"></div>
-        <span class="text-[#B8923E] text-sm font-semibold tracking-[0.35em] uppercase font-['Space_Grotesk']">Membership</span>
-        <div class="w-14 h-[2px] bg-gradient-to-l from-transparent to-[#D4A853]"></div>
+      <div class="flex items-center justify-center gap-4 mb-8">
+        <div class="w-16 h-[1px] bg-gradient-to-r from-transparent to-[#B8963E]"></div>
+        <span class="text-[#B8963E] text-xs font-['Jost'] font-medium tracking-[0.3em] uppercase">Membership</span>
+        <div class="w-16 h-[1px] bg-gradient-to-l from-transparent to-[#B8963E]"></div>
       </div>
-      <h2 class="font-['Space_Grotesk'] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#1A1A2E] mb-6">
+      <h2 class="font-['Bodoni_Moda'] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-medium text-[#1A1817] mb-6">
         Discover the power of membership with
-        <span class="bg-gradient-to-r from-[#D4A853] via-[#C9993D] to-[#B8923E] bg-clip-text text-transparent"> India's largest revenue-based financing platform</span>
+        <span class="text-gold-gradient"> India's largest revenue-based financing platform</span>
       </h2>
     </div>
 
     <!-- Premium tabs card -->
-    <div class="relative bg-white/90 backdrop-blur-xl rounded-[2rem] shadow-[0_0_80px_rgba(212,168,83,0.1)] border border-[#D4A853]/10 overflow-hidden reveal">
+    <div class="relative bg-white/90 backdrop-blur-xl rounded-3xl shadow-luxe border border-[#1A1817]/5 overflow-hidden reveal">
       <!-- Inner glow -->
-      <div class="absolute inset-0 bg-gradient-to-br from-[#D4A853]/3 via-transparent to-[#B8923E]/3 rounded-[2rem]"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-[#B8963E]/3 via-transparent to-[#96751C]/3 rounded-3xl"></div>
 
       <!-- Tab Headers with sliding indicator -->
-      <div class="relative flex border-b border-[#D4A853]/10">
-        <div class="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-[#D4A853] to-[#B8923E] transition-all duration-500" id="tab-indicator" style="width: 50%;"></div>
+      <div class="relative flex border-b border-[#B8963E]/10">
+        <div class="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-[#B8963E] to-[#96751C] transition-all duration-500" id="tab-indicator" style="width: 50%;"></div>
         <button
-          class="membership-tab flex-1 px-8 lg:px-12 py-6 lg:py-8 text-lg lg:text-xl font-semibold text-[#B8923E] transition-all duration-300 relative z-10"
+          class="membership-tab flex-1 px-8 lg:px-12 py-6 lg:py-8 text-lg lg:text-xl font-['Jost'] font-medium text-[#B8963E] transition-all duration-300 relative z-10"
           data-tab="investors"
         >
           Investors
         </button>
         <button
-          class="membership-tab flex-1 px-8 lg:px-12 py-6 lg:py-8 text-lg lg:text-xl font-semibold text-[#1A1A2E]/40 hover:text-[#1A1A2E]/70 transition-all duration-300 relative z-10"
+          class="membership-tab flex-1 px-8 lg:px-12 py-6 lg:py-8 text-lg lg:text-xl font-['Jost'] font-medium text-[#1A1817]/40 hover:text-[#1A1817]/70 transition-all duration-300 relative z-10"
           data-tab="corporates"
         >
           Corporates
@@ -71,34 +70,34 @@ const corporateBenefits = [
         <div id="investors-content" class="membership-content">
           <div class="grid lg:grid-cols-3 gap-10 lg:gap-16 items-start">
             <div class="lg:col-span-2">
-              <h3 class="font-['Space_Grotesk'] text-2xl lg:text-3xl font-bold text-[#1A1A2E] mb-8">For Investors</h3>
+              <h3 class="font-['Bodoni_Moda'] text-2xl lg:text-3xl font-medium text-[#1A1817] mb-8">For Investors</h3>
               <ul class="space-y-5">
                 {investorBenefits.map((benefit, index) => (
                   <li class="flex items-start gap-5 group" style={`animation-delay: ${index * 50}ms;`}>
-                    <div class="w-7 h-7 bg-gradient-to-br from-[#D4A853]/15 to-[#D4A853]/5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:from-[#D4A853]/25 group-hover:to-[#D4A853]/10 transition-all duration-300">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#B8923E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <div class="w-7 h-7 bg-gradient-to-br from-[#B8963E]/15 to-[#B8963E]/5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:from-[#B8963E]/25 group-hover:to-[#B8963E]/10 transition-all duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#B8963E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="20 6 9 17 4 12"/>
                       </svg>
                     </div>
-                    <span class="text-[#1A1A2E]/60 leading-relaxed group-hover:text-[#1A1A2E]/80 transition-colors duration-300">{benefit}</span>
+                    <span class="text-[#1A1817]/60 leading-relaxed font-['Jost'] font-light group-hover:text-[#1A1817]/80 transition-colors duration-300">{benefit}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div class="lg:col-span-1">
-              <div class="relative bg-gradient-to-br from-[#F5F0E6] to-[#EBE4D6] rounded-3xl p-8 lg:p-10 text-center border border-[#D4A853]/15 overflow-hidden">
+              <div class="relative bg-gradient-to-br from-[#FAF8F5] to-[#E8E4DF] rounded-3xl p-8 lg:p-10 text-center border border-[#B8963E]/15 overflow-hidden">
                 <!-- Decorative element -->
-                <div class="absolute top-0 right-0 w-24 h-24 bg-[#D4A853]/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                <div class="absolute top-0 right-0 w-24 h-24 bg-[#B8963E]/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
 
-                <h4 class="relative font-['Space_Grotesk'] text-xl lg:text-2xl font-bold text-[#1A1A2E] mb-4">Start Investing Today</h4>
-                <p class="relative text-[#1A1A2E]/50 text-sm mb-8">Begin your journey as a Punjab Angels investor</p>
+                <h4 class="relative font-['Bodoni_Moda'] text-xl lg:text-2xl font-medium text-[#1A1817] mb-4">Start Investing Today</h4>
+                <p class="relative text-[#1A1817]/50 text-sm mb-8 font-['Jost']">Begin your journey as a Punjab Angels investor</p>
                 <a
                   href="/investor-enrollment"
-                  class="relative group inline-flex items-center justify-center gap-2 w-full px-6 py-4.5 bg-gradient-to-r from-[#D4A853] to-[#B8923E] text-white font-semibold rounded-full hover:shadow-[0_0_40px_rgba(212,168,83,0.4)] transition-all duration-500 hover:-translate-y-0.5"
+                  class="relative group inline-flex items-center justify-center gap-2 w-full px-6 py-4.5 bg-[#1A1817] text-white font-['Jost'] font-medium rounded-full hover:shadow-luxe transition-all duration-500 hover:-translate-y-0.5"
                 >
                   <span>Begin Your Investment Journey</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
                   </svg>
                 </a>
               </div>
@@ -110,34 +109,34 @@ const corporateBenefits = [
         <div id="corporates-content" class="membership-content hidden">
           <div class="grid lg:grid-cols-3 gap-10 lg:gap-16 items-start">
             <div class="lg:col-span-2">
-              <h3 class="font-['Space_Grotesk'] text-2xl lg:text-3xl font-bold text-[#1A1A2E] mb-8">For Corporates</h3>
+              <h3 class="font-['Bodoni_Moda'] text-2xl lg:text-3xl font-medium text-[#1A1817] mb-8">For Corporates</h3>
               <ul class="space-y-5">
                 {corporateBenefits.map((benefit, index) => (
                   <li class="flex items-start gap-5 group" style={`animation-delay: ${index * 50}ms;`}>
-                    <div class="w-7 h-7 bg-gradient-to-br from-[#D4A853]/15 to-[#D4A853]/5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:from-[#D4A853]/25 group-hover:to-[#D4A853]/10 transition-all duration-300">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#B8923E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <div class="w-7 h-7 bg-gradient-to-br from-[#B8963E]/15 to-[#B8963E]/5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:from-[#B8963E]/25 group-hover:to-[#B8963E]/10 transition-all duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#B8963E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="20 6 9 17 4 12"/>
                       </svg>
                     </div>
-                    <span class="text-[#1A1A2E]/60 leading-relaxed group-hover:text-[#1A1A2E]/80 transition-colors duration-300">{benefit}</span>
+                    <span class="text-[#1A1817]/60 leading-relaxed font-['Jost'] font-light group-hover:text-[#1A1817]/80 transition-colors duration-300">{benefit}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div class="lg:col-span-1">
-              <div class="relative bg-gradient-to-br from-[#F5F0E6] to-[#EBE4D6] rounded-3xl p-8 lg:p-10 text-center border border-[#D4A853]/15 overflow-hidden">
+              <div class="relative bg-gradient-to-br from-[#FAF8F5] to-[#E8E4DF] rounded-3xl p-8 lg:p-10 text-center border border-[#B8963E]/15 overflow-hidden">
                 <!-- Decorative element -->
-                <div class="absolute top-0 right-0 w-24 h-24 bg-[#D4A853]/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                <div class="absolute top-0 right-0 w-24 h-24 bg-[#B8963E]/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
 
-                <h4 class="relative font-['Space_Grotesk'] text-xl lg:text-2xl font-bold text-[#1A1A2E] mb-4">Join Our Corporate Network</h4>
-                <p class="relative text-[#1A1A2E]/50 text-sm mb-8">Get started with corporate membership</p>
+                <h4 class="relative font-['Bodoni_Moda'] text-xl lg:text-2xl font-medium text-[#1A1817] mb-4">Join Our Corporate Network</h4>
+                <p class="relative text-[#1A1817]/50 text-sm mb-8 font-['Jost']">Get started with corporate membership</p>
                 <a
                   href="/corporate-membership-enrollment"
-                  class="relative group inline-flex items-center justify-center gap-2 w-full px-6 py-4.5 bg-gradient-to-r from-[#D4A853] to-[#B8923E] text-white font-semibold rounded-full hover:shadow-[0_0_40px_rgba(212,168,83,0.4)] transition-all duration-500 hover:-translate-y-0.5"
+                  class="relative group inline-flex items-center justify-center gap-2 w-full px-6 py-4.5 bg-[#1A1817] text-white font-['Jost'] font-medium rounded-full hover:shadow-luxe transition-all duration-500 hover:-translate-y-0.5"
                 >
                   <span>Get Started</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
                   </svg>
                 </a>
               </div>
@@ -161,11 +160,11 @@ const corporateBenefits = [
       // Update tabs styling
       tabs.forEach((t, i) => {
         if (t.getAttribute('data-tab') === target) {
-          t.classList.remove('text-[#1A1A2E]/40');
-          t.classList.add('text-[#B8923E]');
+          t.classList.remove('text-[#1A1817]/40');
+          t.classList.add('text-[#B8963E]');
         } else {
-          t.classList.remove('text-[#B8923E]');
-          t.classList.add('text-[#1A1A2E]/40');
+          t.classList.remove('text-[#B8963E]');
+          t.classList.add('text-[#1A1817]/40');
         }
       });
 

@@ -39,7 +39,7 @@ Be A Part of this Transformative Delegation!
 
 ## Event Image
 
-![CapTech 2024](/content/media/captech24/1st_image.jpg)
+![CapTech 2024](/content/media/captech24/1st_image.webp)
 
 ---
 

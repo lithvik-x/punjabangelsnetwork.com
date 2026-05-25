@@ -35,7 +35,7 @@ Having participated in CapTech2022 & CapTech2023, Captech2024 are excited to con
 
 ## Event Image
 
-![CapTech 2025](/content/media/captech24/2nd_image.jpg)
+![CapTech 2025](/content/media/captech24/2nd_image.webp)
 
 ---
 

@@ -42,7 +42,7 @@ For entrepreneurs, investors, and business leaders seeking international exposur
 
 ## Event Image
 
-![CAPTECH 2026](/content/media/captech24/3rd_image.jpg)
+![CAPTECH 2026](/content/media/captech24/3rd_image.webp)
 
 ---
 

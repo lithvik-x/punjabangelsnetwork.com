@@ -19,7 +19,7 @@
 **Breadcrumb:** Home / Apply
 
 **Hero Images:**
-- ![About CTA](/content/media/guest/images/backgrounds/about-cta.jpg)
+- ![About CTA](/content/media/guest/images/backgrounds/about-cta.webp)
 - ![Drone Shot](/content/media/guest/images/drone_shot_v0_bvbh6et7i4w91.avif)
 
 ---

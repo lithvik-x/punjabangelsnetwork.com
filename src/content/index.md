@@ -220,7 +220,7 @@ Sahil Makkar is a Nationally recognized Exponential Thought Leader, Strategic Bu
 
 **Heading:** Join your hands with us for a better life and future
 
-**Background:** ![Stats Background](/content/media/guest/images/backgrounds/funfact-bg-1-1.png)
+**Background:** ![Stats Background](/content/media/guest/images/backgrounds/funfact-bg-1-1.webp)
 
 **Stats:**
 - 100+ Total Events

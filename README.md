@@ -1,43 +1,23 @@
-# Astro Starter Kit: Minimal
+# Punjab Angels Network
 
-```sh
-bun create astro@latest -- --template minimal
+Website for Punjab Angels Network - India's foremost platform dedicated to cultivating a startup ecosystem.
+
+## Tech Stack
+
+- **Astro** - Static site generator
+- **daisyUI** - Component library
+- **Tailwind CSS v4** - Utility-first CSS
+
+## Setup
+
+```bash
+bun install
+bun run dev    # Start dev server
+bun run build  # Production build
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Deployment
 
-## 🚀 Project Structure
+This project auto-deploys from the `main` branch via Cloudflare Pages.
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Live site: https://punjabangelsnetwork.pages.dev
